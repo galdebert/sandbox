@@ -410,5 +410,6 @@
  </Config>
  <Folder name="ConsoleApp1">
   <File path="main.d" />
+  <File path="fundamentals.d" />
  </Folder>
 </DProject>
