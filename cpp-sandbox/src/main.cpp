@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+
 void test_initializer_list();
 void test_aggregate_initialization();
 void test_range_loop();
