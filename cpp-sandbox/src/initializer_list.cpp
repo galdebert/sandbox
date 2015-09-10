@@ -5,15 +5,16 @@ namespace initializer_list {
 
 struct MyClass {
   // initializer_list constructor
-  MyClass(const std::initializer_list<int>& init_list) {
-    for (auto x : init_list) m_vector.push_back(x);
+  MyClass(const std::initializer_list<int> &init_list) {
+    for (auto x : init_list)
+      m_vector.push_back(x);
   }
 
   std::vector<int> m_vector;
 };
 
 void test() {
-  int array[] = {1, 2, 3};  // as before cpp11
+  int array[] = {1, 2, 3}; // as before cpp11
 
   std::vector<int> v1 = {1, 2, 3};
   std::vector<int> v2{1, 2, 3};

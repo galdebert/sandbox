@@ -36,15 +36,15 @@ void test() {
   // 2. regular constructor with the params
   // 3. aggregate initializer
 
-  A a1 = {1, 1};  // regular constructor
+  A a1 = {1, 1}; // regular constructor
   // A a2 = { 1, 1, 1 }; // ERROR aggregate initializer
 
   // B b1 = { 1, 1 };    // ERROR regular constructor
   // B b2 = { 1, 1, 1 }; // ERROR aggregate initializer
 
   // POD
-  C c1 = {1, 1};     // aggregate initializer
-  C c2 = {1, 1, 1};  // aggregate initializer
+  C c1 = {1, 1};    // aggregate initializer
+  C c2 = {1, 1, 1}; // aggregate initializer
 }
 }
 

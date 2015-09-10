@@ -8,45 +8,45 @@ namespace type_traits {
 //          or array of such type/class, possibly cv-qualified
 // standard_layout means same memory layout than in C
 
-struct VTBL  // not trivial, not standard_layout, not POD
+struct VTBL // not trivial, not standard_layout, not POD
     {
   int i;
   int j;
   virtual ~VTBL();
 };
 
-struct T  // trivial, not standard_layout, not POD
+struct T // trivial, not standard_layout, not POD
     {
   int i;
 
- private:
+private:
   int j;
 };
 
-struct DTR  // not trivial, standard_layout, not POD
+struct DTR // not trivial, standard_layout, not POD
     {
   int i;
   int j;
   ~DTR();
 };
 
-struct CTR  // not trivial, standard_layout, not POD
+struct CTR // not trivial, standard_layout, not POD
     {
   CTR(int i_, int j_) : i(i_), j(j_) {}
   int i;
   int j;
 };
 
-struct DCTR  // not trivial, standard_layout, not POD
+struct DCTR // not trivial, standard_layout, not POD
     {
   DCTR() : i(0), j(0) {}
   int i;
   int j;
 };
 
-struct POD  // trivial, standard_layout, POD
+struct POD // trivial, standard_layout, POD
     {
-  POD() = default;  // not necessary but explicitly using default contructor in
+  POD() = default; // not necessary but explicitly using default contructor in
   // c++11
   int i;
   int j;

@@ -4,7 +4,8 @@
 namespace lambda {
 void test() {
   std::vector<int> v;
-  for (int i = 0; i < 10; ++i) v.push_back(i);
+  for (int i = 0; i < 10; ++i)
+    v.push_back(i);
 
   int sum_1 = 0;
   std::for_each(v.begin(), v.end(), [&](int x) { sum_1 += x; });

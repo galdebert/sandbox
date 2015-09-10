@@ -6,4 +6,4 @@ run_clang_format.run(
 	[r"C:\Users\galde_000\Dev\sandbox\cpp-sandbox\src",
 	"--style", "LLVM"])
 
-input("Press key to continue")
+raw_input("Press Enter to continue")

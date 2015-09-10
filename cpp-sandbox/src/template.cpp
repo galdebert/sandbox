@@ -15,12 +15,10 @@ auto MyTemplateFunc(A a, B b) -> decltype(a + b) {
 
 // ------------------------ alias template ------------------------
 
-template <typename T>
-using MyPtr = T*;
+template <typename T> using MyPtr = T *;
 
 //
-template <typename A, typename B>
-class SomeContainer {
+template <typename A, typename B> class SomeContainer {
   using a_type = A;
   using b_type = B;
   A a;
@@ -28,15 +26,13 @@ class SomeContainer {
 };
 
 class MyBase {
- public:
+public:
   void MyFunc();
   virtual void MyVirtualFunc();
 };
 
 // hide a template parameter
-template <typename A>
-using SomeContainer2 = SomeContainer<A, MyBase>;
+template <typename A> using SomeContainer2 = SomeContainer<A, MyBase>;
 
-template <typename A>
-using AType = typename SomeContainer2<A>::a_type;
+template <typename A> using AType = typename SomeContainer2<A>::a_type;
 }
