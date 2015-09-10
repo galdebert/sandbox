@@ -151,6 +151,7 @@
     <ClCompile Include="..\src\range_loop.cpp" />
     <ClCompile Include="..\src\template.cpp" />
     <ClCompile Include="..\src\tuple.cpp" />
+    <ClCompile Include="..\src\type_erasure.cpp" />
     <ClCompile Include="..\src\type_traits.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

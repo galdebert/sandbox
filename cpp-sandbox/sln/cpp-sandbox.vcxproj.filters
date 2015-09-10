@@ -11,5 +11,6 @@
     <ClCompile Include="..\src\template.cpp" />
     <ClCompile Include="..\src\tuple.cpp" />
     <ClCompile Include="..\src\type_traits.cpp" />
+    <ClCompile Include="..\src\type_erasure.cpp" />
   </ItemGroup>
 </Project>
