@@ -13,4 +13,29 @@
     <ClCompile Include="..\src\type_traits.cpp" />
     <ClCompile Include="..\src\type_erasure.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <Filter Include="format">
+      <UniqueIdentifier>{202974e8-3001-43b3-a9cb-380ba1d328f3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\format\cmd.cmd">
+      <Filter>format</Filter>
+    </None>
+    <None Include="..\format\cpp_sandbox_format.py">
+      <Filter>format</Filter>
+    </None>
+    <None Include="..\format\format-google.py">
+      <Filter>format</Filter>
+    </None>
+    <None Include="..\format\format-llvm.py">
+      <Filter>format</Filter>
+    </None>
+    <None Include="..\format\format-mozilla.py">
+      <Filter>format</Filter>
+    </None>
+    <None Include="..\format\format-webkit.py">
+      <Filter>format</Filter>
+    </None>
+  </ItemGroup>
 </Project>

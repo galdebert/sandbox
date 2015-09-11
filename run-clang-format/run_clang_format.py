@@ -1,9 +1,10 @@
-import sys, argparse, os, fnmatch, subprocess
+﻿import sys, argparse, os, fnmatch, subprocess
 
 def run(args):
     parser = argparse.ArgumentParser()
     parser.add_argument("rootdir", nargs="*")
     parser.add_argument("--style", nargs="?", default="Google")
+    parser.add_argument("--verbose", action="store_true")
     parsed_args = parser.parse_args(args)
 
     def find_files(directory, pattern):
@@ -19,7 +20,8 @@ def run(args):
         for filename in find_files(rootdir, "*.cpp"):
             call_args.append(filename)
 
-    print(call_args)
+    if parsed_args.verbose:
+        print(call_args)
 
     subprocess.call(call_args)
 
