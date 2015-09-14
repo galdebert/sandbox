@@ -24,12 +24,6 @@ struct C {
   int z;
 };
 
-struct D {
-  int x;
-  int y;
-  int z;
-};
-
 void test() {
   // uniform initialization look for:
   // 1. initializer_list constructor
@@ -48,4 +42,4 @@ void test() {
 }
 }
 
-void test_aggregate_initialization() { aggregate_initialization::test(); }
+void TestAggregateInitialization() { aggregate_initialization::test(); }
