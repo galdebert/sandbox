@@ -8,100 +8,137 @@ using namespace std;
 
 class A {
  public:
+  // default ctr
   A() {
     cout << "default_ctr\n";
     mem_ = nullptr;
   }
 
+  // ctr
   A(int x) {
     cout << "ctr(x)\n";
     mem_ = new int(x);
   }
 
-  void Init(int x) { mem_ = new int(x); }
+  // dtr
+  ~A() {
+    // don't log dtr cout << "dtr\n";
+    delete mem_;
+  }
 
+  // copy constructor
   A(const A& other) {
     cout << "copy_ctr\n";
     if (other.mem_) {
       mem_ = new int();
       *mem_ = *other.mem_;
-    } else
+    } else {
       mem_ = nullptr;
+    }
   }
 
+  // move constructor
   A(A&& other) {
     cout << "move_ctr\n";
     mem_ = other.mem_;
     other.mem_ = nullptr;
   }
 
-  //A& operator=(const A& other) {
-  //  cout << "op=\n";
-  //  return *this;
-  //}
+  // copy assignment
+  A& operator=(const A& other) {
+    cout << "copy_assign\n";
+    if (other.mem_) {
+      if (mem_ == nullptr)
+        mem_ = new int();
+      *mem_ = *other.mem_;
+    } else {
+      if (mem_ != nullptr)
+      {
+        delete mem_;
+        mem_ = nullptr;
+      }
+    }
 
-  static A GetRValue() { static A sa(1); return sa; }
+      return *this;
+  }
+
+  // move assignment
+  A& operator=(A&& other) {
+    cout << "move_assign\n";
+    mem_ = other.mem_;
+    other.mem_ = nullptr;
+    return *this;
+  }
 
   int* mem_;
 };
 
-void Func_1(const A& a) {
-  cout << "in Func_1\n";
+static A g_a;
+
+void Read_ByConstRef(const A& a) {
+  cout << *a.mem_ << "\n";
 }
 
-void Func_2(A a) {
-  cout << "in Func_2\n";
+void Read_ByValue(A a) {
+  cout << *a.mem_ << "\n";
 }
 
-class B
-{
-  template<typename T>
-  void Func(T&& o) {
-    cout << "in B::Func(T&& o)\n";
-    a_ = o;
-  }
-  A a_;
-};
+void Set_ByConstRef(const A& a) {
+  g_a = a;
+}
+
+void Set_ByValue(A a) {
+  g_a = a;
+}
+
+void Set_ByValue_ThenMove(A a) {
+  g_a = std::move(a);
+}
+
+#define LOG_CALL(x)           \
+  cout << "\n" << #x << "\n"; \
+  x;
 
 void Test() {
-  cout << "A a1(1);\n"; 
-  A a1(1);
+  LOG_CALL(A a1(1))
+  LOG_CALL(A a2 = a1)
+  LOG_CALL(a1 = a2)
+  LOG_CALL(A a3 = move(a2))
+  LOG_CALL(A a4 = A(3))
+  LOG_CALL(a4 = A(3))
 
-  cout << "A a2 = a1;\n"; 
-  A a2 = a1;
+  cout << "\n------------ lvalue\n";
+  LOG_CALL(Read_ByConstRef(a1))       // none
+  LOG_CALL(Read_ByValue(a1))          // copy_ctr
+  LOG_CALL(Set_ByConstRef(a1))        // copy_assign
+  LOG_CALL(Set_ByValue(a1))           // copy_ctr copy_assign
+  LOG_CALL(Set_ByValue_ThenMove(a1))  // copy_ctr move_assign
 
-  cout << "a1 = a2;\n"; 
-  a1 = a2;
+  cout << "\n------------ rvalue\n";
+  LOG_CALL(Read_ByConstRef(A(3)))       // none
+  LOG_CALL(Read_ByValue(A(3)))          // none (copy ellided)
+  LOG_CALL(Set_ByConstRef(A(3)))        // copy_assign
+  LOG_CALL(Set_ByValue(A(3)))           // copy_assign (copy ellided)
+  LOG_CALL(Set_ByValue_ThenMove(A(3)))  // move_assign (copy ellided)
 
-  cout << "A a3 = move(a1);\n"; 
-  A a3 = move(a1);
+  cout << "\n------------ prepare sunk lvalue\n";
+  A s1(1), s2(1), s3(1), s4(1), s5(1);
+  cout << "\n------------ sunk lvalue\n";
+  LOG_CALL(Read_ByConstRef(std::move(s1)))       // none
+  LOG_CALL(Read_ByValue(std::move(s2)))          // move_ctr
+  LOG_CALL(Set_ByConstRef(std::move(s3)))        // copy_assign
+  LOG_CALL(Set_ByValue(std::move(s4)))           // move_ctr copy_assign
+  LOG_CALL(Set_ByValue_ThenMove(std::move(s5)))  // move_ctr move_assign
 
-  cout << "A a4 = A(3);\n"; 
-  A a4 = A(3);
-
-  
-  A lvalue(2);
-  cout << "------------ lvalue\n";
-  cout << "void Func_1(const A& a)\n";
-  Func_1(lvalue);
-  cout << "void Func_2(A a)\n";
-  Func_2(lvalue);
-
-
-  cout << "------------ rvalue\n";
-  cout << "void Func_1(const A& a)\n";
-  Func_1(A(2));
-  cout << "void Func_2(A a)\n";
-  Func_2(A(2));
-
-
-  cout << "------------ move(rvalue)\n";
-  cout << "void Func_1(const A& a)\n";
-  Func_1(std::move(A(2)));
-  cout << "void Func_2(A a)\n";
-  Func_2(std::move(A(2)));
-
+  // to read: use by const ref
+  //
+  // to set:
+  //                 |    lvalue     |        rvalue        |    sunk lvalue
+  // by const ref    | 1 copy_assign | copy_ctr move_assign | copy_assign
+  // by value(+move) | 1 copy_assign | move_assign          | move_ctr move_assign
 }
 }
 
-void TestMove() { test_move::Test(); }
+void TestMove() {
+  test_move::Test();
+}
