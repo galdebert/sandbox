@@ -130,12 +130,14 @@ void Test() {
   LOG_CALL(Set_ByValue(std::move(s4)))           // move_ctr copy_assign
   LOG_CALL(Set_ByValue_ThenMove(std::move(s5)))  // move_ctr move_assign
 
-  // to read: use by const ref
+  // Read: use by const ref
   //
-  // to set:
-  //                 |    lvalue     |        rvalue        |    sunk lvalue
-  // by const ref    | 1 copy_assign | copy_ctr move_assign | copy_assign
-  // by value(+move) | 1 copy_assign | move_assign          | move_ctr move_assign
+  //                             faster if 
+  // Set:         by const ref   cheap to move?  by value(+move)     
+  //            ----------------------------------------------------
+  // lvalue       copy_assign          >         copy_ctr move_assign             
+  // rvalue       copy_assign         <<<        move_assign              
+  // sunk lvalue  copy_assign         <<<        move_ctr move_assign             
 }
 }
 
