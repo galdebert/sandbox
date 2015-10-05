@@ -26,4 +26,4 @@ void test() {
 }
 }
 
-void test_initializer_list() { return initializer_list::test(); }
+void TestInitializerList() { return initializer_list::test(); }

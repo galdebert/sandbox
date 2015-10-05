@@ -148,6 +148,7 @@
     <ClCompile Include="..\src\initializer_list.cpp" />
     <ClCompile Include="..\src\lamdas.cpp" />
     <ClCompile Include="..\src\main.cpp" />
+    <ClCompile Include="..\src\move.cpp" />
     <ClCompile Include="..\src\override.cpp" />
     <ClCompile Include="..\src\range_loop.cpp" />
     <ClCompile Include="..\src\template.cpp" />

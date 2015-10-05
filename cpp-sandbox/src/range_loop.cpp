@@ -14,4 +14,4 @@ void test() {
 }
 }
 
-void test_range_loop() { range_loop::test(); }
+void TestRangeLoop() { range_loop::test(); }

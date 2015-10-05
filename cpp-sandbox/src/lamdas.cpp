@@ -20,4 +20,4 @@ void test() {
 }
 }
 
-void test_lambda() { lambda::test(); }
+void TestLambda() { lambda::test(); }
