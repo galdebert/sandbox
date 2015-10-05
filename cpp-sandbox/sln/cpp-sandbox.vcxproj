@@ -144,6 +144,7 @@
   <ItemGroup>
     <ClCompile Include="..\src\aggregate_initialization.cpp" />
     <ClCompile Include="..\src\algorithms.cpp" />
+    <ClCompile Include="..\src\format_test.cpp" />
     <ClCompile Include="..\src\initializer_list.cpp" />
     <ClCompile Include="..\src\lamdas.cpp" />
     <ClCompile Include="..\src\main.cpp" />
