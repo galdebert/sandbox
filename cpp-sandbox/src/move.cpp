@@ -132,12 +132,12 @@ void Test() {
 
   // Read: use by const ref
   //
-  //                             faster if 
-  // Set:         by const ref   cheap to move?  by value(+move)     
+  //                             faster if
+  // Set:         by const ref   cheap to move?  by value(+move)
   //            ----------------------------------------------------
-  // lvalue       copy_assign          >         copy_ctr move_assign             
-  // rvalue       copy_assign         <<<        move_assign              
-  // sunk lvalue  copy_assign         <<<        move_ctr move_assign             
+  // lvalue       copy_assign          >         copy_ctr move_assign
+  // rvalue       copy_assign         <<<        move_assign
+  // sunk lvalue  copy_assign         <<<        move_ctr move_assign
 }
 }
 
