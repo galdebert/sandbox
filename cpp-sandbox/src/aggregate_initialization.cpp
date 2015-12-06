@@ -39,6 +39,9 @@ void test() {
   // POD
   C c1 = {1, 1};    // aggregate initializer
   C c2 = {1, 1, 1}; // aggregate initializer
+
+  (void)c1; // avoid warning : unused variable 'c1'
+  (void)c2; // avoid warning : unused variable 'c2'
 }
 }
 

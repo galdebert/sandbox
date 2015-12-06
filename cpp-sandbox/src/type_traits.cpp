@@ -20,7 +20,10 @@ struct T // trivial, not standard_layout, not POD
   int i;
 
 private:
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wunused-private-field"
   int j;
+#pragma clang diagnostic pop
 };
 
 struct DTR // not trivial, standard_layout, not POD

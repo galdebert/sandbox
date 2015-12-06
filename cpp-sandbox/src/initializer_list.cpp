@@ -15,6 +15,7 @@ struct MyClass {
 
 void test() {
   int array[] = {1, 2, 3}; // as before cpp11
+  (void)array;
 
   std::vector<int> v1 = {1, 2, 3};
   std::vector<int> v2{1, 2, 3};

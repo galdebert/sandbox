@@ -37,7 +37,7 @@ class Object {
     virtual shared_ptr<Interface> Clone() const override {
       return make_shared<Concrete<T>>(data_);
     }
-    virtual void DoFunc() { Func(data_); }
+    virtual void DoFunc() override { Func(data_); }
     T data_;
   };
 
