@@ -1,0 +1,16 @@
+{
+  "name": "js1",
+  "version": "0.0.0",
+  "description": "nodejs_1",
+  "main": "app.js",
+  "author": {
+    "name": "Guillaume",
+    "email": ""
+  },
+  "dependencies": {
+    "babel-preset-react": "^6.5.0",
+    "babelify": "^7.2.0",
+    "react": "^0.14.8",
+    "react-dom": "^0.14.8"
+  }
+}
