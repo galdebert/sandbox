@@ -16,13 +16,14 @@
   <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
   <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
   <ItemGroup>
-    <Compile Include="react_test_bundle.js" />
     <Content Include="browserify_test.html" />
     <Content Include="browserify_test_bundle.bat" />
+    <Content Include="react_test.html" />
+    <Content Include="test.html" />
     <Content Include="react_test_bundle.bat" />
     <Content Include="browserify_test.js" />
     <Content Include="package.json" />
-    <Compile Include="browserify_test_bundle.js" />
+    <Compile Include="test.js" />
     <Compile Include="react_test.js" />
   </ItemGroup>
   <ItemGroup />
