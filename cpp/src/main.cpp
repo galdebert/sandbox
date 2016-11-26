@@ -6,13 +6,17 @@ void TestRangeLoop();
 void TestLambda();
 void TestTypeErasure();
 void TestMove();
+void TestCompareVec3f();
+void TestDivNearest();
 
 int main() {
   //TestInitializerList();
   //TestAggregateInitialization();
   //TestRangeLoop();
   //TestLambda();
-  TestMove();
+  //TestMove();
+  TestCompareVec3f();
+  TestDivNearest();
 
   getchar();
   return 0;

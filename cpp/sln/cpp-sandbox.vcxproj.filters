@@ -14,6 +14,8 @@
     <ClCompile Include="..\src\type_erasure.cpp" />
     <ClCompile Include="..\src\move.cpp" />
     <ClCompile Include="..\src\format_test.cpp" />
+    <ClCompile Include="..\src\compare_vec3f.cpp" />
+    <ClCompile Include="..\src\profile_idiv.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="format">
