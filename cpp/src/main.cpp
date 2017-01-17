@@ -16,7 +16,7 @@ int main() {
   //TestLambda();
   //TestMove();
   TestCompareVec3f();
-  TestDivNearest();
+  //TestDivNearest();
 
   getchar();
   return 0;
