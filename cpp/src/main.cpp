@@ -14,8 +14,8 @@ int main() {
   //TestAggregateInitialization();
   //TestRangeLoop();
   //TestLambda();
-  //TestMove();
-  TestCompareVec3f();
+  TestMove();
+  //TestCompareVec3f();
   //TestDivNearest();
 
   getchar();
