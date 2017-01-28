@@ -16,6 +16,8 @@
     <ClCompile Include="..\src\format_test.cpp" />
     <ClCompile Include="..\src\compare_vec3f.cpp" />
     <ClCompile Include="..\src\profile_idiv.cpp" />
+    <ClCompile Include="..\src\stringstream.cpp" />
+    <ClCompile Include="..\src\has_func.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="format">
@@ -41,5 +43,8 @@
     <None Include="..\format\format-webkit.py">
       <Filter>format</Filter>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\type_name.h" />
   </ItemGroup>
 </Project>

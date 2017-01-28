@@ -8,18 +8,23 @@ void TestTypeErasure();
 void TestMove();
 void TestCompareVec3f();
 void TestDivNearest();
+void TestStringStream();
+void TestHasFunc();
 
-int main() {
-  //TestInitializerList();
-  //TestAggregateInitialization();
-  //TestRangeLoop();
-  //TestLambda();
-  TestMove();
-  //TestCompareVec3f();
-  //TestDivNearest();
+int main()
+{
+	// TestInitializerList();
+	// TestAggregateInitialization();
+	// TestRangeLoop();
+	// TestLambda();
+	// TestMove();
+	// TestCompareVec3f();
+	// TestDivNearest();
+	// TestStringStream();
+	TestHasFunc();
 
-  getchar();
-  return 0;
+	getchar();
+	return 0;
 }
 
 // std::function can refer to any callable object

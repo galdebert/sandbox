@@ -144,6 +144,7 @@
     <ClCompile Include="..\src\algorithms.cpp" />
     <ClCompile Include="..\src\compare_vec3f.cpp" />
     <ClCompile Include="..\src\format_test.cpp" />
+    <ClCompile Include="..\src\has_func.cpp" />
     <ClCompile Include="..\src\initializer_list.cpp" />
     <ClCompile Include="..\src\lamdas.cpp" />
     <ClCompile Include="..\src\main.cpp" />
@@ -151,6 +152,7 @@
     <ClCompile Include="..\src\override.cpp" />
     <ClCompile Include="..\src\profile_idiv.cpp" />
     <ClCompile Include="..\src\range_loop.cpp" />
+    <ClCompile Include="..\src\stringstream.cpp" />
     <ClCompile Include="..\src\template.cpp" />
     <ClCompile Include="..\src\tuple.cpp" />
     <ClCompile Include="..\src\type_erasure.cpp" />
@@ -163,6 +165,9 @@
     <None Include="..\format\format-llvm.py" />
     <None Include="..\format\format-mozilla.py" />
     <None Include="..\format\format-webkit.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\type_name.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
