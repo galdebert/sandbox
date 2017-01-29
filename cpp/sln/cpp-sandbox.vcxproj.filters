@@ -18,6 +18,7 @@
     <ClCompile Include="..\src\profile_idiv.cpp" />
     <ClCompile Include="..\src\stringstream.cpp" />
     <ClCompile Include="..\src\has_func.cpp" />
+    <ClCompile Include="..\src\enable_if.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="format">

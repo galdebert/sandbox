@@ -10,6 +10,7 @@ void TestCompareVec3f();
 void TestDivNearest();
 void TestStringStream();
 void TestHasFunc();
+void TestEnableIf();
 
 int main()
 {
@@ -22,6 +23,7 @@ int main()
 	// TestDivNearest();
 	// TestStringStream();
 	TestHasFunc();
+	//TestEnableIf();
 
 	getchar();
 	return 0;

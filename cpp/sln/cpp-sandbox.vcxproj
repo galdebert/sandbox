@@ -143,6 +143,7 @@
     <ClCompile Include="..\src\aggregate_initialization.cpp" />
     <ClCompile Include="..\src\algorithms.cpp" />
     <ClCompile Include="..\src\compare_vec3f.cpp" />
+    <ClCompile Include="..\src\enable_if.cpp" />
     <ClCompile Include="..\src\format_test.cpp" />
     <ClCompile Include="..\src\has_func.cpp" />
     <ClCompile Include="..\src\initializer_list.cpp" />
