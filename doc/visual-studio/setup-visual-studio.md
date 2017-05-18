@@ -1,6 +1,10 @@
 # Steps to remember when installing visual studio
 
-## Visual Assist
+## Visual Studio TextEditor
+
+![](./visual-studio-texteditor-setup.png)
+
+## Visual Assist Options
 
 ![](./visual-assist-setup.png)
 
@@ -13,6 +17,7 @@
 
 ![](./import-settings.png)
 
-and import both:
-- [galdebert-vs-2015.vssettings](./galdebert-vs-2015.vssettings)
+and import:
+- [galdebert-vs-2015-colors.vssettings](./galdebert-vs-2015-colors.vssettings)
 - [galdebert-vs-2015-keyboard-shortcuts.vssettings](./galdebert-vs-2015-keyboard-shortcuts.vssettings)
+- [galdebert-vs-2017-texteditor-cpp.vssettings](./galdebert-vs-2017-texteditor-cpp.vssettings)
