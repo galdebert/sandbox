@@ -6,6 +6,8 @@ namespace type_erasure {
 
 using namespace std;
 
+template <typename T> void Func(const T&) {}
+
 // The idea
 // Object (without virtual func) can store any Data type (without virtual func)
 // Object::Func() will call Func(const Data&)

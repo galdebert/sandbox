@@ -6,9 +6,9 @@
 
 using KyInt64 = long long;
 
-__forceinline KyInt64 DivFake(KyInt64 a, KyInt64 b) { return a ^ b; }
+inline KyInt64 DivFake(KyInt64 a, KyInt64 b) { return a ^ b; }
 
-__forceinline KyInt64
+inline KyInt64
 DivNearest(KyInt64 a, KyInt64 b) {
   KyInt64 n = (a ^ b) >> 63;
   KyInt64 m = 2 * n + 1;
@@ -20,7 +20,7 @@ DivNearest(KyInt64 a, KyInt64 b) {
 
 }
 
-__forceinline KyInt64 DivRegular(KyInt64 a, KyInt64 b) { return a / b; }
+inline KyInt64 DivRegular(KyInt64 a, KyInt64 b) { return a / b; }
 
 template <typename F>
 void ProfileDiv(const std::string &title, F idiv, std::vector<KyInt64> &arr) {

@@ -17,14 +17,24 @@ public:
 
 template<typename T> StrStream& operator<<(StrStream& stream, const T& x)
 {
-	stream.ss << x;
-	return stream;
+    stream.ss << x;
+    return stream;
 }
 
 std::string operator<<(StrStream& stream, const StrStream::Make& x)
 {
-	return stream.ss.str();
+    return stream.ss.str();
 }
+
+class StrStream2 : public std::stringstream
+{
+public:
+    template<typename T> StrStream2& operator<<(const T& x)
+    {
+        *(static_cast<std::stringstream*>(this)) << x;
+        return *this;
+    }
+};
 
 void Test()
 {
@@ -37,15 +47,20 @@ void Test()
 		std::cout << str;
 	}
 
-	{
-		std::string str = (StrStream() << "some integer " << i << '\n').str();
-		std::cout << str;
-	}
+    {
+        std::string str = (StrStream2() << "some integer " << i << '\n').str();
+        std::cout << str;
+    }
 
-	{
-		std::string str = StrStream() << "some integer " << i << '\n' << StrStream::Make();
-		std::cout << str;
-	}
+//	{
+//		std::string str = (StrStream() << "some integer " << i << '\n').str();
+//		std::cout << str;
+//	}
+
+//	{
+//		std::string str = StrStream() << "some integer " << i << '\n' << StrStream::Make();
+//		std::cout << str;
+//	}
 }
 
 }

@@ -6,7 +6,7 @@
 
 struct Vec3f { float x; float y; float z; };
 
-__forceinline bool less_vec3f_1(const Vec3f& a, const Vec3f& b)
+inline bool less_vec3f_1(const Vec3f& a, const Vec3f& b)
 {
   if (a.x < b.x) return true;
   if (a.x > b.x) return false;
@@ -15,14 +15,14 @@ __forceinline bool less_vec3f_1(const Vec3f& a, const Vec3f& b)
   return a.z < b.z;
 }
 
-__forceinline bool less_vec3f_2(const Vec3f& a, const Vec3f& b)
+inline bool less_vec3f_2(const Vec3f& a, const Vec3f& b)
 {
   if (a.x != b.x) return a.x < b.x;
   if (a.y != b.y) return a.y < b.y;
   return a.z < b.z;
 }
 
-__forceinline bool less_vec3f_3(const Vec3f& a, const Vec3f& b)
+inline bool less_vec3f_3(const Vec3f& a, const Vec3f& b)
 {
   int x = (a.x == b.x ? 9 : (a.x < b.x ? 0 : 18)); // 0 9 18
   int y = (a.y == b.y ? 3 : (a.y < b.y ? 0 : 6));  // 0 3 6
@@ -31,7 +31,7 @@ __forceinline bool less_vec3f_3(const Vec3f& a, const Vec3f& b)
 }
 
 template<typename F>
-__forceinline void ProfileSort(const std::string& title, F less, std::vector<Vec3f>& arr)
+inline void ProfileSort(const std::string& title, F less, std::vector<Vec3f>& arr)
 {
   std::cout << title << " = ";
   auto sorted = arr;

@@ -25,7 +25,7 @@ int main()
 	TestHasFunc();
 	//TestEnableIf();
 
-	getchar();
+    //getchar();
 	return 0;
 }
 
