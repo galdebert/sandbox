@@ -7,8 +7,12 @@
 // If B is true, std::enable_if has a public member typedef type, equal to T; otherwise, there is no member typedef.
 //------------------------------------------------------------------
 
-
-namespace detail { struct inplace_t{}; }
+namespace detail
+{
+struct inplace_t
+{
+};
+}
 void* operator new(std::size_t, void* p, detail::inplace_t) { return p; }
 
 // #1, enabled via the return type
@@ -29,20 +33,17 @@ construct(T* t, Args&&... args)
 }
 
 // #3, enabled via a function parameter
-template <class T>
-void destroy(T* t, typename std::enable_if<std::is_trivially_destructible<T>::value>::type* = 0) { std::cout << "destroying trivially destructible T\n"; }
+template <class T> void destroy(T* t, typename std::enable_if<std::is_trivially_destructible<T>::value>::type* = 0) { std::cout << "destroying trivially destructible T\n"; }
 
 // #4, enabled via a template parameter
-template <class T, typename std::enable_if<!std::is_trivially_destructible<T>::value && (std::is_class<T>::value || std::is_union<T>::value), int>::type = 0>
-void destroy(T* t)
+template <class T, typename std::enable_if<!std::is_trivially_destructible<T>::value && (std::is_class<T>::value || std::is_union<T>::value), int>::type = 0> void destroy(T* t)
 {
 	std::cout << "destroying non-trivially destructible T\n";
 	t->~T();
 }
 
 // #5, enabled via a template parameter
-template <class T, typename = std::enable_if_t<std::is_array<T>::value> >
-void destroy(T* t) // note, function signature is unmodified
+template <class T, typename = std::enable_if_t<std::is_array<T>::value> > void destroy(T* t) // note, function signature is unmodified
 {
 	for (std::size_t i = 0; i < std::extent<T>::value; ++i)
 	{
@@ -63,7 +64,6 @@ template <class T, class Enable = void> class A
 template <class T> class A<T, typename std::enable_if<std::is_floating_point<T>::value>::type>
 {
 }; // specialization for floating point types
-
 
 void TestEnableIf()
 {

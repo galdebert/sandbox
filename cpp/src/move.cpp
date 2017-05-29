@@ -3,7 +3,6 @@
 #include <string.h>
 #include <vector>
 
-
 // move semantics are useful for *containers* of resources: allocated buffer, objects on the heap, file, socket...
 // most known examples are std::vector, std::unique_ptr, but all std container support move semantics
 // this allows to transfer / steal / move the resources ("heavy" content, expensive to copy) in between instances of a container
@@ -19,10 +18,7 @@ class A
 public:
 	//--------------------------------
 	// default constructor
-	A()
-	{
-		cout << "A default_constructor called\n";
-	}
+	A() { cout << "A default_constructor called\n"; }
 
 	//--------------------------------
 	// constructor
@@ -143,8 +139,8 @@ void Set_ByValue(A a) { g_a = a; }
 
 void Set_ByValue_ThenMove(A a) { g_a = std::move(a); }
 
-#define LOG_CALL(x)             \
-	cout << "\n" << #x << ";\n"; \
+#define LOG_CALL(x)                                                                                                                                                                \
+	cout << "\n" << #x << ";\n";                                                                                                                                                   \
 	x;
 
 void Test()
@@ -152,20 +148,20 @@ void Test()
 	cout << "========================================\n";
 	cout << "\ntest_move::Test() begin\n";
 
-	LOG_CALL(A a1(1))    // constructor
-	LOG_CALL(A a2 = a1)  // copy_constructor
-	LOG_CALL(a1 = a2)    // copy_assignmnent
-	LOG_CALL(A a3(std::move(a2)))  // construct explicit move  => move_assignment
-	LOG_CALL(A a4 = A(3))          // construct from temporary => 1 call to constructor, because 1 copy_construction is elided
-	LOG_CALL(a4 = A(3))            // assign from temporary    => move_assignment
+	LOG_CALL(A a1(1))             // constructor
+	LOG_CALL(A a2 = a1)           // copy_constructor
+	LOG_CALL(a1 = a2)             // copy_assignmnent
+	LOG_CALL(A a3(std::move(a2))) // construct explicit move  => move_assignment
+	LOG_CALL(A a4 = A(3))         // construct from temporary => 1 call to constructor, because 1 copy_construction is elided
+	LOG_CALL(a4 = A(3))           // assign from temporary    => move_assignment
 
 	cout << "\n------------ default move operations with: struct B { A m_a; };\n";
-	LOG_CALL(B b1)       // constructor
-	LOG_CALL(B b2 = b1)  // copy_constructor
-	LOG_CALL(b1 = b2)    // copy_assignmnent
-	LOG_CALL(B b3(std::move(b2)))  // construct explicit move  => move_assignment
-	LOG_CALL(B b4 = B())           // construct from temporary => 1 call to constructor, because 1 copy_construction is elided
-	LOG_CALL(b4 = B())             // assign from temporary    => move_assignment
+	LOG_CALL(B b1)                // constructor
+	LOG_CALL(B b2 = b1)           // copy_constructor
+	LOG_CALL(b1 = b2)             // copy_assignmnent
+	LOG_CALL(B b3(std::move(b2))) // construct explicit move  => move_assignment
+	LOG_CALL(B b4 = B())          // construct from temporary => 1 call to constructor, because 1 copy_construction is elided
+	LOG_CALL(b4 = B())            // assign from temporary    => move_assignment
 
 	cout << "\n------------ lvalue\n";
 	LOG_CALL(Read_ByConstRef(a1))      // none
@@ -203,7 +199,6 @@ void Test()
 	// Set(a) a is lvalue        copy_assignement                  >         copy_constructor move_assignement
 	// Set(a) a is rvalue        copy_assignement                 <<<        move_assignement
 	// Set(a) a is sunk lvalue   copy_assignement                 <<<        move_constructor move_assignement
-
 
 	cout << "\ntest_move::Test() end\n";
 	cout << "========================================\n";

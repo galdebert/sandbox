@@ -19,6 +19,7 @@
     <ClCompile Include="..\src\stringstream.cpp" />
     <ClCompile Include="..\src\has_func.cpp" />
     <ClCompile Include="..\src\enable_if.cpp" />
+    <ClCompile Include="..\src\crtp.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="format">

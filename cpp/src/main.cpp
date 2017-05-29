@@ -11,6 +11,7 @@ void TestDivNearest();
 void TestStringStream();
 void TestHasFunc();
 void TestEnableIf();
+void TestCRTP();
 
 int main()
 {
@@ -22,10 +23,11 @@ int main()
 	// TestCompareVec3f();
 	// TestDivNearest();
 	// TestStringStream();
-	TestHasFunc();
-	//TestEnableIf();
+	// TestHasFunc();
+	// TestEnableIf();
+	TestCRTP();
 
-    //getchar();
+	// getchar();
 	return 0;
 }
 

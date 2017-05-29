@@ -1,4 +1,5 @@
-namespace template_ {
+namespace template_
+{
 // ------------------------ type alias ------------------------
 // juste like typedef but easier to use
 
@@ -8,27 +9,26 @@ typedef void (*MyFuncAdd2)(int, int);
 // ------------------------ auto decltype with template ------------------------
 
 // function template - decltype as return value
-template <typename A, typename B>
-auto MyTemplateFunc(A a, B b) -> decltype(a + b) {
-  return a + b;
-}
+template <typename A, typename B> auto MyTemplateFunc(A a, B b) -> decltype(a + b) { return a + b; }
 
 // ------------------------ alias template ------------------------
 
-template <typename T> using MyPtr = T *;
+template <typename T> using MyPtr = T*;
 
 //
-template <typename A, typename B> class SomeContainer {
-  using a_type = A;
-  using b_type = B;
-  A a;
-  B b;
+template <typename A, typename B> class SomeContainer
+{
+	using a_type = A;
+	using b_type = B;
+	A a;
+	B b;
 };
 
-class MyBase {
+class MyBase
+{
 public:
-  void MyFunc();
-  virtual void MyVirtualFunc();
+	void MyFunc();
+	virtual void MyVirtualFunc();
 };
 
 // hide a template parameter
