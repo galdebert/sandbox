@@ -1,0 +1,20 @@
+{
+  "name": "node1",
+  "version": "1.0.0",
+  "description": "my first node app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tsc_": "tsc"
+  },
+  "keywords": [],
+  "author": "Guillaume Aldebert",
+  "license": "ISC",
+  "dependencies": {
+    "fs": "0.0.1-security"
+  },
+  "devDependencies": {
+    "@types/node": "^8.0.6",
+    "typescript": "^2.4.1"
+  }
+}
