@@ -28,7 +28,7 @@ template <typename F> void ProfileDiv(const std::string& title, F idiv, std::vec
 	auto start = std::chrono::steady_clock::now();
 
 	KyInt64 result = 1;
-	for (int i = 0; i < arr.size() / 2; ++i)
+	for (size_t i = 0; i < arr.size() / 2; ++i)
 	{
 		KyInt64 r = idiv(arr[i * 2], arr[i * 2 + 1]);
 		result = result | r;

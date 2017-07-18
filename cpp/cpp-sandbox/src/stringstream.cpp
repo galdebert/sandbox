@@ -23,7 +23,7 @@ template <typename T> StrStream& operator<<(StrStream& stream, const T& x)
 	return stream;
 }
 
-std::string operator<<(StrStream& stream, const StrStream::Make& x) { return stream.ss.str(); }
+std::string operator<<(StrStream& stream, const StrStream::Make&) { return stream.ss.str(); }
 
 class StrStream2 : public std::stringstream
 {
