@@ -7,8 +7,13 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "Launch Program",
-            "program": "${file}",
+            "name": "main",
+            //"program": "C:/Dev/nodejs/node.exe", does not work
+            // 
+            // "args": [
+            //     "main.js"
+            // ],
+            "program": "${workspaceRoot}/out/main.js",
             "outFiles": [
                 "${workspaceRoot}/out/**/*.js"
             ]
