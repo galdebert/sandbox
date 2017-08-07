@@ -1,0 +1,39 @@
+Shortcuts
+
+View.NavigateBackward   Ctrl+LeftArrow   
+View.NavigateForward    Ctrl+RightArrow  
+ 
+Edit.NavigateTo         Ctrl+T           
+Edit.GoToDefinition     F12              
+Edit.GoToDeclaration    Ctrl+F12         
+Edit.FindAllReferences  Shift+F12        
+
+Edit.GotoNextLocation   F8 (to browse errors, find symbols results...)
+Edit.GotoPrevLocation   Shift+F8
+
+Quick Find              Ctrl+F
+Find in Files           Ctrl+Shift+F
+Quick Replace           Ctrl+H
+Replace in Files        Ctrl+Shift+H
+
+VAssistX.FindReferences            Shift+Alt+F
+VAssistX.FindSymbolDialog          Shift+Alt+S
+VAssistX.GotoImplementation        Alt+G
+VAssistX.GotoRelated               Shift+Alt+G
+VAssistX.ListMethodsInCurrentFile  Alt+M
+
+VAssistX.NavigateBack              Alt+LeftArrow
+VAssistX.NavigateForward           Alt+RightArrow
+
+VAssistX.OpenCorrespondingFile     Alt+O
+VAssistX.OpenFileInSolutionDialog  Shift+Alt+O
+
+VAssistX.RefactorRename            Shift+Alt+R
+VAssistX.RefactorContextMenu       Shift+Alt+Q
+VAssistX.RefactorCreateFromUsage   Shift+Alt+C
+
+View call hierarchy                Ctrl+K Ctrl+T
+
+Team.Git.CompareWithPrevious       Ctrl+Shift+Alt+P
+Team.Git.CompareWithUnmodified     Ctrl+Shift+Alt+U
+Team.Git.ViewHistory               Ctrl+Shift+Alt+H
