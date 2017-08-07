@@ -37,3 +37,4 @@ View call hierarchy                Ctrl+K Ctrl+T
 Team.Git.CompareWithPrevious       Ctrl+Shift+Alt+P
 Team.Git.CompareWithUnmodified     Ctrl+Shift+Alt+U
 Team.Git.ViewHistory               Ctrl+Shift+Alt+H
+Team.Git.Annotate                  Ctrl+Shift+Alt+B  (not here by default, annotate means blame)
