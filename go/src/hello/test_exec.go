@@ -1,15 +1,13 @@
 package main
 
-//import "path"
 import "path"
 import "path/filepath"
 import "os"
-//import "fmt"
 import "os/exec"
 import "fmt"
-//import "io/ioutil"
 
-func testPath() error {
+func testExec() error {
+
 	exe, err := os.Executable()
 	if err != nil {
 		return err
@@ -19,7 +17,6 @@ func testPath() error {
 	dir := path.Dir(exe)
 
 	cmd := exec.Command("cloc", dir)
-
 	fmt.Println(cmd.Args)
 
 	output, err := cmd.Output()
