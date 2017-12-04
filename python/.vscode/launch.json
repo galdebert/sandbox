@@ -2,13 +2,30 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "format_all",
+            "name": "src lint",
+            "program": "${workspaceRoot}/src.py",
+            "args": ["lint"],
             "type": "python",
             "pythonPath":"${config:python.pythonPath}",
             "request": "launch",
             "stopOnEntry": false,
             "console": "integratedTerminal",
-            "program": "${workspaceRoot}/format_all.py",
+            "cwd": "${workspaceRoot}",
+            "debugOptions": [
+                "WaitOnAbnormalExit",
+                "WaitOnNormalExit",
+                "RedirectOutput"
+            ]
+        },
+        {
+            "name": "src fmt",
+            "program": "${workspaceRoot}/src.py",
+            "args": ["fmt"],
+            "type": "python",
+            "pythonPath":"${config:python.pythonPath}",
+            "request": "launch",
+            "stopOnEntry": false,
+            "console": "integratedTerminal",
             "cwd": "${workspaceRoot}",
             "debugOptions": [
                 "WaitOnAbnormalExit",

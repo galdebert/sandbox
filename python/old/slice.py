@@ -12,5 +12,6 @@ class SliceTestCase(TestCase):
         print("a[2:-2]={}".format(a[2:-2]))
         print("a[0:]={}".format(a[0:]))
 
+
 if __name__ == '__main__':
     main()
