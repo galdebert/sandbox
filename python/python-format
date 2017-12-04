@@ -1,0 +1,31 @@
+# configures pylint and autopep8 
+
+# To disable errors/warnings in a given file use `pylint: disable=CODE` after the shebang, ex:
+#  # Disable 'W0212: Access to a protected member of a client class' because ... explain why
+#  # pylint: disable=W0212`
+
+# pylint config
+[MESSAGES CONTROL]
+disable=missing-docstring
+       ,invalid-name
+       ,line-too-long
+       ,redefined-outer-name
+       ,bad-whitespace
+       ,R0914 # Too many local variables
+       ,R0912 # Too many branches
+       ,W0511 # todos
+       ,R0913 # Too many arguments
+       ,R0201 # Method could be a function
+       ,R0902 # Too many instance attributes
+       ,R0903 # Too few public methods
+
+[TYPECHECK]
+# what is the TYPECHECK section ?
+
+# autopep8 config
+[pep8]
+max-line-length = 180
+# E302 - Add missing 2 blank lines.
+# E26  - Fix spacing after comment hash for inline comments.
+# E265 - Fix spacing after comment hash for block comments.
+ignore = E26,E265,E302

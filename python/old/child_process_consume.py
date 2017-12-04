@@ -1,8 +1,9 @@
+#!/usr/bin/env python3
+
 import subprocess
 import time
 import sys
 import asyncio
-import sys
 import threading
 import queue
 

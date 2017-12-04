@@ -1,0 +1,8 @@
+{
+    // use a environment variable for python.pythonPath? pylint needs env.PYTHON3_DIR, debugger needs env:PYTHON3_DIR...
+    // Let's use a hardcoded path in the workspace settings:
+    "python.pythonPath": "C:/Dev/python36/python.exe",
+    "python.linting.enabled": true,
+    "python.linting.pylintArgs": ["--rcfile=${workspaceRoot}/python-format"],
+    "python.formatting.autopep8Args" : ["--global-config", "${workspaceRoot}/python-format"]
+}
