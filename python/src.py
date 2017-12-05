@@ -6,11 +6,8 @@ import subprocess
 from typing import List
 import importlib.util
 import argparse
-import utils
+from utils import utils
 
-# if importlib.util.find_spec("pylint") is None: # test that pylint module is installed
-#     pie_print(f'lint python: `pylint` not found. Try to run `{sys.executable} -m pip install -r {pie_root}/requirements.txt`')
-#     return -1
 
 def packages_iter(root_absdir: str) -> List[str]:
     for p in utils.glob_abs(f'{root_absdir}/**/__init__.py'):
@@ -76,6 +73,7 @@ def help_str(choices: List[str], default: str=None) -> str:
     default_str = f' default={default}' if default is not None else ''
     return f'[{", ".join(choices)}]{default_str}'
 
+
 if __name__ == '__main__':
     root_absdir = utils.norm_path(os.path.dirname(os.path.abspath(__file__)))
     os.chdir(root_absdir)
@@ -86,7 +84,8 @@ if __name__ == '__main__':
     main_parser.add_argument('--verbose', '-v', action='store_true', help='')
 
     argv = sys.argv[1:]
-    args, command_argv = main_parser.parse_args(argv) # use parse_known_args(argv) when other parsers are used in each command
+    #args, command_argv = main_parser.parse_known_args(argv) # use when other parsers are used in each command
+    args = main_parser.parse_args(argv)
 
     rc = 0
     if args.command == 'fmt':
