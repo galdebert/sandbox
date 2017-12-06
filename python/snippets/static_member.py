@@ -3,11 +3,11 @@
 def make_myfunc():
     _my_static_var = 0
 
-    def _my_func_impl():
+    def _my_funcimpl():
         nonlocal _my_static_var
         _my_static_var += 1
         return _my_static_var
-    return _my_func_impl
+    return _my_funcimpl
 
 
 myfunc = make_myfunc()
