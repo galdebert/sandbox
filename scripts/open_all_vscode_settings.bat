@@ -1,0 +1,1 @@
+py -m galdebert.find_file vscode .. "%GA_SCRIPTS%" -g .vscode/settings.json -v

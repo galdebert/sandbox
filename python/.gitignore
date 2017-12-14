@@ -9,5 +9,4 @@
 
 # __pycache__/ != **/__pycache__/* ?
 
-.vs/
 __pycache__/
