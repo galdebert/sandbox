@@ -1,11 +1,16 @@
 cmake_minimum_required(VERSION 3.8)
 
-project("test_zmq") # project() must be called otherwise (at least) CMAKE_SYSTEM_NAME is not set
-# we call project("test_zmq${pm_build_name}") later that superseeds this command
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/../../../galdebert-scripts/cmake")
+include("pm_init")
 
-set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/../../script/cmake")
-include("pm_platform")
+project("test_cmake_${PM_BUILD}")
+pm_init("debug;release")
 
-project(test_zmq)
-set(sources "src/main.cpp")
-add_executable(test_zmq ${sources})
+set(sources "${PM_ROOT}/src/main.cpp")
+set(include_dirs "${PM_ROOT}/src/private")
+#pm_print_list("sources" "${sources}")
+#pm_print_list("include_dirs" "${include_dirs}")
+pm_exe("test_cmake_exe" "${sources}" "${include_dirs}" "")
+
+
+

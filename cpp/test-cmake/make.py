@@ -1,17 +1,8 @@
 #!/usr/bin/env python3
 
-import sys
-import os
+import galdebert.make as ga_make
+import galdebert.utils as ga_utils
 
-scripts_dir = os.environ['GA_SCRIPTS']
-sys.path.insert(0, scripts_dir)
-
-import galdebert.ga_make
-
-# import os
-# import sys
-# import subprocess
-# from typing import List
-# import importlib.util
-# import argparse
-# from utils import utils
+if __name__ == '__main__':
+    root_absdir = ga_utils.containing_dir(__file__)
+    ga_make.make(root_absdir)

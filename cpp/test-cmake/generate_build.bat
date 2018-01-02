@@ -1,1 +1,0 @@
-cmake -H"." -B"build/win64"
