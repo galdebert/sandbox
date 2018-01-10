@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			// "${env:GA_SCRIPTS}" substitution does not work here...
+			"path": "../../../../galdebert-scripts"
+		}
+	],
+	"settings": {
+		"files.exclude": {
+			"build/": true
+		}
+	}
+}
