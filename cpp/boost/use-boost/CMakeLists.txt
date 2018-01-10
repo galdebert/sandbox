@@ -40,7 +40,7 @@ pm_target_sources_dir(boost_polygon INTERFACE "${Boost_INCLUDE_DIR}/boost/timer"
 # we use a function to benefit from variable scoping
 function(use_boost_exe root)
     add_executable(use_boost "")
-    pm_target_binaries_output_paths(use_boost "${root}/bin" "${root}/lib" "win64")
+    pm_target_binaries(use_boost "${root}/bin" "${root}/lib" "win64")
     pm_target_sources_dir(use_boost PRIVATE "${root}/src" "src")
     target_link_libraries(use_boost boost_polygon)
 endfunction()
