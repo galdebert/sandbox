@@ -1,15 +1,16 @@
 {
-    "folders": [
-        {
-            "path": "."
-        },
-        {
-            "path": "../../../galdebert-scripts" // "${env:GA_SCRIPTS}" substitution does not work here...
-        }
-    ],
-    "settings": {
-        "files.exclude": {
-            "build/": true
-        }
-    }
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			// "${env:GA_SCRIPTS}" substitution does not work here...
+			"path": "../../../galdebert-scripts"
+		}
+	],
+	"settings": {
+		"files.exclude": {
+			"build/": true
+		}
+	}
 }
