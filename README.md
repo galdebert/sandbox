@@ -1,2 +1,2 @@
 # sandbox
-Play with different langages
+Play with different languages, take random notes, most of the repo is not mantained.
