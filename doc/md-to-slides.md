@@ -20,12 +20,12 @@ Usage: C:\Dev\nodejs\node.exe C:\Users\guillaume\AppData\Roaming\npm\node_module
 
 Options:
   --title, -t           Generated page title
-  --style, -s           Path to custom stylesheet                                                      [default: "C:\\Users\\guillaume\\AppData\\Roaming\\npm\\node_modules\\markdown-to-slides\\template\\style.css"]
+  --style, -s           Path to custom stylesheet
   --script, -j          Path to custom javascript
-  --template, -l        Path to custom mustache template                                               [default: "C:\\Users\\guillaume\\AppData\\Roaming\\npm\\node_modules\\markdown-to-slides\\template\\template.html"]
+  --template, -l        Path to custom mustache template
   --help, -h            This screen
   --output-file, -o     Path to output file (stdout if not specified)
-  --document-mode, -d   Generate slides from a document without slide separators (---) or annotations  [boolean]
-  --watch, -w           Watch mode                                                                     [boolean]
-  --level               Heading level to use as new slides (for example 3 is ###)                      [default: 3]
-  --include-remark, -i  Include Remark sources (around 850kB) into the generated document              [boolean]
+  --document-mode, -d   Generate slides from a document without slide separators (---) or annotations
+  --watch, -w           Watch mode
+  --level               Heading level to use as new slides (for example 3 is ###)
+  --include-remark, -i  Include Remark sources (around 850kB) into the generated document
