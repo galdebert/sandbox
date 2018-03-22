@@ -2,7 +2,8 @@
   // to leave generated files along the .ts/.tsx
   "files.exclude":{
     "src/**/*.js": { "when": "$(basename).ts" },
-    "src/**/**.js": { "when": "$(basename).tsx" }
+    "src/**/**.js": { "when": "$(basename).tsx" },
+    "src/**/*.js.map": true
   }
 
   // to use a generated folder
