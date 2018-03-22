@@ -1,0 +1,8 @@
+node_modules/
+
+# to leave .js and js.map along the .ts
+src/**/*.js
+src/**/*.js.map
+
+# to use a generated folder
+generated/
