@@ -48,7 +48,6 @@ smartgit                          |     no     |      yes   |
 
 Note: `gnome-keyring` and `libsecret` linux "credential managers" did not work for me.
 
-
 # WHEN YOU HAVE DIFFERENT USERS FOR DIFFERENT REPOS
 
 You can configure an individual repo to use a specific user / email address which overrides the global configuration. From the root of the repo, run
