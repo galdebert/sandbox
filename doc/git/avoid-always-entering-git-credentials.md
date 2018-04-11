@@ -38,6 +38,12 @@ git config --global --unset credential.helper
 git config --global core.askpass /usr/bin/ksshaskpass
 git config --global credential.username galdebert
 ```
+app      | core.askpass|
+---------|-------------|
+cmdline  |  ok         |
+vscode   |  ok         |
+smartgit |  nope       |
+
 Works fine with the command line but not with smartgit
 
 Note: `gnome-keyring` and `libsecret` linux "credential managers" did not work for me.
