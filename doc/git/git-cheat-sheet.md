@@ -5,7 +5,6 @@ including untracked files
 git add -A && git commit -m mymessage
 ```
 
-
 # Create a patch for a list a commits
 
 https://stackoverflow.com/questions/2217452/in-git-how-do-i-create-a-single-patch-for-the-last-2-revisions
