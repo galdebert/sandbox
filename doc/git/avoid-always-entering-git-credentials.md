@@ -39,11 +39,11 @@ git config --global core.askpass /usr/bin/ksshaskpass
 git config --global credential.username galdebert
 ```
 
-app      | core.askpass|
----------|-------------|
-cmdline  |  ok         |
-vscode   |  nope       |
-smartgit |  nope       |
+app      | core.askpass|github token |
+---------|-------------|-------------|
+cmdline  |      yes    |      no     |
+vscode   |      no     |      no     |
+smartgit |      no     |      yes    |
 
 Works fine with the command line but not with smartgit
 
