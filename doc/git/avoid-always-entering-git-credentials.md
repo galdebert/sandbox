@@ -38,6 +38,7 @@ git config --global --unset credential.helper
 git config --global core.askpass /usr/bin/ksshaskpass
 git config --global credential.username galdebert
 ```
+
 app      | core.askpass|
 ---------|-------------|
 cmdline  |  ok         |
