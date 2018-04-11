@@ -39,15 +39,13 @@ git config --global core.askpass /usr/bin/ksshaskpass
 git config --global credential.username galdebert
 ```
 
-app                               |core.askpass|github token|credential.helper cache
-----------------------------------|------------|------------|
-cmdline                           |     yes    |      no    |
-vscode                            |     no     |      no    |
-vscode+KnisterPeter.vscode-github |     no     |      yes   |
-smartgit                          |     no     |      yes   |
+app       |core.askpass|github token|credential.helper cache|
+----------|------------|------------|-----------------------|
+cmdline   |    yes     |    no      |    yes                |
+vscode    |    no      |    no      |    yes                |
+smartgit  |    no      |    yes     |    yes                |
 
 Note: `gnome-keyring` and `libsecret` linux "credential managers" did not work for me.
-
 
 # WHEN YOU HAVE DIFFERENT USERS FOR DIFFERENT REPOS
 
