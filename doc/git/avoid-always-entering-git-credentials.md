@@ -39,7 +39,7 @@ git config --global core.askpass /usr/bin/ksshaskpass
 git config --global credential.username galdebert
 ```
 
-app                               |core.askpass|github token|
+app                               |core.askpass|github token|credential.helper cache
 ----------------------------------|------------|------------|
 cmdline                           |     yes    |      no    |
 vscode                            |     no     |      no    |
