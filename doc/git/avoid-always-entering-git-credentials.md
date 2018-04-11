@@ -39,11 +39,12 @@ git config --global core.askpass /usr/bin/ksshaskpass
 git config --global credential.username galdebert
 ```
 
-app      | core.askpass|github token |
----------|-------------|-------------|
-cmdline  |      yes    |      no     |
-vscode   |      no     |      no     |
-smartgit |      no     |      yes    |
+app                               |core.askpass|github token|
+----------------------------------|------------|------------|
+cmdline                           |     yes    |      no    |
+vscode                            |     no     |      no    |
+vscode+KnisterPeter.vscode-github |     no     |      yes   |
+smartgit                          |     no     |      yes   |
 
 Note: `gnome-keyring` and `libsecret` linux "credential managers" did not work for me.
 
