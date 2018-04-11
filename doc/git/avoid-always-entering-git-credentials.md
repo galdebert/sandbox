@@ -42,7 +42,7 @@ git config --global credential.username galdebert
 app      | core.askpass|
 ---------|-------------|
 cmdline  |  ok         |
-vscode   |  ok         |
+vscode   |  nope       |
 smartgit |  nope       |
 
 Works fine with the command line but not with smartgit
