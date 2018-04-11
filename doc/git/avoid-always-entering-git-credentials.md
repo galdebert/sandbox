@@ -30,18 +30,17 @@ or
 git config --global credential.helper libsecret
 ```
 
+## Linux (kubuntu)
 
-## Linux
-
-Not a credential manager, 
+Not using a credential manager but the askpass mechanism instead
 ```
 git config --global --unset credential.helper
 git config --global core.askpass /usr/bin/ksshaskpass
 git config --global credential.username galdebert
 ```
+Works fine with the command line but not with smartgit
 
-
-Note: `gnome-keyring` and `libsecret` did not work
+Note: `gnome-keyring` and `libsecret` linux "credential managers" did not work for me.
 
 
 # WHEN YOU HAVE DIFFERENT USERS FOR DIFFERENT REPOS
