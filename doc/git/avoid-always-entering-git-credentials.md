@@ -45,8 +45,6 @@ cmdline  |      yes    |      no     |
 vscode   |      no     |      no     |
 smartgit |      no     |      yes    |
 
-Works fine with the command line but not with smartgit
-
 Note: `gnome-keyring` and `libsecret` linux "credential managers" did not work for me.
 
 
