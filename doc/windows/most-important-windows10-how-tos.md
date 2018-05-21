@@ -2,12 +2,15 @@
 
 right click -> new -> shortcut
 
-in shortcut location write, for ex:
+in shortcut location an exe, for ex:
 ```
-C:\Windows\System32\cmd.exe /c code "D:\onedrive\hot\TODO\TODO.md"
+C:\Windows\System32\cmd.exe /c myexe.exe myparam
 ```
 
-It must begin with C:\Windows\System32\cmd.exe otherwise the shortcut cannot be pinned to the taskbar
+or (note the vscode: protocol)
+```
+C:\Windows\explorer.exe vscode://file/D:/onedrive/hot/TODO/TODO.md
+```
 
 right click on the shortcut, you have:
 - pin to start
