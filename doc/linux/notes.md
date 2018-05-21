@@ -52,6 +52,26 @@ get public IP
 dig +short myip.opendns.com @resolver1.opendns.com
 ```
 
+# onedrive
+
+install onedrive from muon (it's a build of https://github.com/skilion/onedrive)
+
+enable the systemd service
+```
+systemctl --user enable onedrive
+```
+
+start
+```
+systemctl --user start onedrive
+```
+
+monitor
+```
+journalctl --user-unit onedrive -f
+```
+
+
 # xdrp
 
 1. install a windowing system compatible with xdrp: xubuntu-desktop
