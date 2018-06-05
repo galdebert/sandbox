@@ -16,6 +16,15 @@ kate filename 2>/dev/null &
 ~/.config/user-dirs.dirs
 ```
 
+# shutter
+
+To change the shutter keyboard shortcut, open kubuntu Custom shortcut and add:
+
+![](notes.md.img/2018-06-05-13-17-49.png)
+
+![](notes.md.img/2018-06-05-13-19-52.png)
+
+
 # SSH
 
 ```
