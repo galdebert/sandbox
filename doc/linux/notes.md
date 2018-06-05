@@ -1,4 +1,3 @@
-
 # Run command same terminal
 
 run kate while removing log
@@ -11,18 +10,31 @@ run kate and continue using the same terminal
 kate filename 2>/dev/null &
 ```
 
+
 # Edit the common directories: desktop, documents, downloads...
 ```
 ~/.config/user-dirs.dirs
 ```
 
-# shutter
+
+# How to change the shutter keyboard shortcut
 
 To change the shutter keyboard shortcut, open kubuntu Custom shortcut and add:
 
 ![](notes.md.img/2018-06-05-13-17-49.png)
 
 ![](notes.md.img/2018-06-05-13-19-52.png)
+
+
+# How to add a link to the taskbar
+
+- right click > create new > link to application
+- set command: code path/to_file/or/dir
+- change the icon
+- this creates a .desktop file
+- drag n drop the .desktop file in the taskbar 
+  - this will copy the .desktop file in /home/guillaume/.local/share/plasma_icons
+  - and register it somewhere so that it's in the tasbar
 
 
 # SSH
@@ -48,6 +60,7 @@ https://www.digitalocean.com/community/tutorials/ufw-essentials-common-firewall-
 sudo ufw allow from 192.168.0.0/24 to any port 22
 ```
 
+
 # ip addresses
 
 get private IP
@@ -60,6 +73,7 @@ get public IP
 ```
 dig +short myip.opendns.com @resolver1.opendns.com
 ```
+
 
 # onedrive
 
@@ -75,7 +89,9 @@ start
 systemctl --user start onedrive
 ```
 
-monitor
+the onedrive service will start on startup
+
+to monitor the service:
 ```
 journalctl --user-unit onedrive -f
 ```
@@ -95,7 +111,7 @@ sudo apt-get install xrdp
 ```
 
 
-# Force 2560x1440 resolution
+# Force 2560x1440 resolution (useless as long as we use HDMI)
 
 1. create file set2560x1440 with content:
 #!/bin/sh
