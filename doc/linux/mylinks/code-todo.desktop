@@ -1,0 +1,19 @@
+[Desktop Entry]
+Comment[en_US]=
+Comment=
+Exec=code /home/guillaume/onedrive/hot/TODO/
+GenericName[en_US]=
+GenericName=
+Icon=knotes
+MimeType=
+Name[en_US]=code-todo
+Name=code-todo
+Path=
+StartupNotify=true
+Terminal=false
+TerminalOptions=
+Type=Application
+X-DBUS-ServiceName=
+X-DBUS-StartupType=
+X-KDE-SubstituteUID=false
+X-KDE-Username=
