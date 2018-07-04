@@ -1,0 +1,1 @@
+First thing to do when you get a fresh clone from github: `npm install`

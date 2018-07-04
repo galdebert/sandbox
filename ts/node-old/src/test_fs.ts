@@ -1,4 +1,4 @@
-import * as fs from "fs";
+import { fs } from "fs";
 
 export function test_fs() {
     fs.open('C:/Dev/sandbox/ts/node1/myfile', 'w', (err, fd) => {
