@@ -1,5 +1,5 @@
 {
-  "name": "node1",
+  "name": "test-node-npm",
   "version": "1.0.0",
   "description": "my first node app",
   "main": "src/main.js",
