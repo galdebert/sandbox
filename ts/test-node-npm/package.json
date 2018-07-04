@@ -2,10 +2,10 @@
   "name": "test-node-npm",
   "version": "1.0.0",
   "description": "my first node app",
-  "main": "src/main.js",
+  "main": "out/main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "tsc_": "tsc"
+    "build": "tsc",
+    "test": "tsc && node out/main.js"
   },
   "keywords": [],
   "author": "Guillaume Aldebert",
