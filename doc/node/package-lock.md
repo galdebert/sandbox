@@ -1,3 +1,9 @@
+# package-lock.json
+
+- `npm init` creates a simple `package.json`
+- `npm outdated` check the registry to see if any (or, specific) installed packages are currently outdated.
+  - wanted is the maximum version of the package that satisfies the semver range 
+  - latest is the version of the package tagged as latest in the registry
 
 # package-lock.json
 
@@ -22,7 +28,7 @@ By default, package-lock.json is updated whenever you run `npm install`.
 Anytime one changes manually package.json
 
 
-# package-lock.json line endings 
+## package-lock.json line endings 
 
 https://stackoverflow.com/questions/32490412/how-can-i-configure-npm-to-use-windows-style-line-endings-in-package-json
 
