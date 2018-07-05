@@ -21,7 +21,7 @@
     // "isolatedModules": true,               /* Transpile each file as a separate module (similar to 'ts.transpileModule'). */
 
     // ---- my options ----
-    "listEmittedFiles": true, /* log the .js files that are created */
+    //"listEmittedFiles": true, /* log the .js files that are created */
     //"listFiles": true,
     
     /* Strict Type-Checking Options */

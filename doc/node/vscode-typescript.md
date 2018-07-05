@@ -1,9 +1,11 @@
 # vscode, typescript and node
 
 
-# Configure Build & Test
+# Configure Build, Test, Debug
 
-with typescript, the `package.json` has these scripts:
+## Configure npm scripts
+
+When using typescript, we can modify `package.json` with:
 
 ```
 {
@@ -17,14 +19,16 @@ with typescript, the `package.json` has these scripts:
 }
 ```
 
+## Configure vscode tasks
+
 vscode automatically read the `package.json` and populate the `Run Tasks` vscode command:
 
     >Tasks: Run Task
 
 will show:
 
-    tsc: build - tsconfig
-    tsc: watch - tsconfig
+    tsc: build - tsconfig.json
+    tsc: watch - tsconfig.json
     npm: build
     npm: test
     npm: start
@@ -38,6 +42,9 @@ running the vscode commands:
 
     >Tasks: Configure Default Test Task
         npm: test
+
+    >Tasks: Configure Task
+        tsc: build
 
 creates the following `tasks.json`:
 
@@ -65,12 +72,20 @@ creates the following `tasks.json`:
         "kind": "test",
         "isDefault": true
       }
+    },
+    {
+      "type": "typescript",
+      "tsconfig": "tsconfig.json",
+      "option": "watch",
+      "problemMatcher": [
+        "$tsc-watch"
+      ]
     }
   ]
 }
 ```
 
-# Configure Debug
+# Configure vscode Debug 
 
 The first time debug is ran, it will create this `launch.json` file:
 
@@ -92,34 +107,51 @@ The first time debug is ran, it will create this `launch.json` file:
 ```
 
 
-# Execute Build, Test, Debug
 
+# Run Build, Test, Debug
 
-## Using npm, on the command line
+## From the command line, using npm
 
 - build: `npm run build`
 - test: `npm test` or `npm run test`
 - start: `npm start` or `npm run start`
 
-
-## From vscode
-
-### Build
+## From vscode - Build
 
     >Tasks: Run Build Task
 
 or the shortcut `Ctrl+Shift+B`
 
-### Test
+## From vscode - Test
 
     >Tasks: Run Test Task
 
 There is no shortcut for the test task.
 
-### Debug
+## From vscode - Debug
 
 - `F5`: run the current launch configuration with debugging
 - `Ctrl+F5`: run the current launch configuration without debugging
 
 `launch.json` + `debug panel` (`F5` or `Ctrl+F5`) is a much better way to run programs than `tasks.json`
 
+Be careful, by default `F5` and `Ctrl+F5` don't build the app using tsc !
+
+The solution is to use `"preLaunchTask": "tsc: build - tsconfig.json"`
+
+`tsc: build - tsconfig.json` is the default label of the task:
+```json
+    {
+      "type": "typescript",
+      "tsconfig": "tsconfig.json",
+      "problemMatcher": [
+        "$tsc"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    }
+```
+
+You can add `"label" : "build"` in the task and then use `"preLaunchTask": "build"` instead.

@@ -1,22 +1,18 @@
 {
-    // Use IntelliSense to learn about possible Node.js debug attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
-    "version": "0.2.0",
-    "configurations": [
-        {
-            "type": "node",
-            "request": "launch",
-            "name": "main",
-            //"program": "C:/Dev/nodejs/node.exe", does not work
-            // 
-            // "args": [
-            //     "main.js"
-            // ],
-            "program": "${workspaceRoot}/out/main.js",
-            "outFiles": [
-                "${workspaceRoot}/out/**/*.js"
-            ]
-        }
-    ]
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch Program",
+      "program": "${workspaceFolder}/out/main.js",
+      "outFiles": [
+        "${workspaceFolder}/out/*.js"
+      ],
+      "preLaunchTask": "build" // use "tsc: build - tsconfig.json" if the task has no label
+    }
+  ]
 }

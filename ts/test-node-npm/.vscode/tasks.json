@@ -1,19 +1,35 @@
 {
-    "version": "0.1.0",
-    "command": "node",
-    "isShellCommand": true,
-    "args": ["node_modules/typescript/bin/tsc", "-p", "."],
-    //"showOutput": "silent",
-    "problemMatcher": "$tsc"
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build",
+      "type": "typescript",
+      "tsconfig": "tsconfig.json",
+      "problemMatcher": [
+        "$tsc"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "type": "npm",
+      "script": "test",
+      "group": {
+        "kind": "test",
+        "isDefault": true
+      }
+    },
+    {
+      "type": "typescript",
+      "tsconfig": "tsconfig.json",
+      "option": "watch",
+      "problemMatcher": [
+        "$tsc-watch"
+      ]
+    }
+  ]
 }
-
-// {
-//     // See https://go.microsoft.com/fwlink/?LinkId=733558
-//     // for the documentation about the tasks.json format
-//     "version": "0.1.0",
-//     "command": "npm",
-//     "isShellCommand": true,
-//     "args": ["run", "tsc_", "--", "-p", "."],
-//     //"showOutput": "silent",
-//     "problemMatcher": "$tsc"
-// }
