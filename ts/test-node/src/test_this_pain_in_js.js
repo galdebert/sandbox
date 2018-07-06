@@ -3,6 +3,7 @@
 // Fat arrows fix it by capturing the meaning of this from the surrounding context. Consider this pure JavaScript class
 
 export function test_this_pain_in_js() {
+  console.log('\n---- test_this_pain_in_js');
 
   function Person(age) {
     this.age = age;

@@ -1,5 +1,6 @@
 
 export function test_closure() {
+  console.log('\n---- test_closure');
 
   function outerFunction(arg: any) {
     var variableInOuterFunction = arg;

@@ -10,6 +10,8 @@ interface Point3D {
 function takePoint2D(point: Point2D) { /* do something */ }
 
 export function test_types_are_structural() {
+  console.log('\n---- test_types_are_structural');
+
   var point2D: Point2D = { x: 0, y: 10 }
   var point3D: Point3D = { x: 0, y: 10, z: 20 }
 

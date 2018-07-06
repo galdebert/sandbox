@@ -1,4 +1,6 @@
 export function test_awful_parts_in_js() {
+  console.log('\n---- test_awful_parts_in_js');
+
   // null and undefined
   // You will need to deal with both. Just check for either with == check.
   // Imagine you are doing `foo.bar == undefined` where bar can be one of:

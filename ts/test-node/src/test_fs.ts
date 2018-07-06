@@ -6,15 +6,16 @@ import * as process from 'process';
 // __filename and __dirname are module-level variables.
 
 export function test_path() {
-  console.log('\ntest_path');
+  console.log('\n---- test_path');
+
   console.log(`process.cwd = ${process.cwd()}`);
   console.log(`__filename is the module path = ${__filename}`);
-  console.log(`__dirname is the module path = ${__dirname}`);
+  console.log(`__dirname is the module containing dir = ${__dirname}`);
 }
 
 export function test_fs() {
   // 1
-  console.log('\ntest_path');
+  console.log('\n---- test_path');
   let p = path.normalize(path.join(process.cwd(), 'data/myfile.txt'))
   console.log(`fs.open('${p}', 'w')`);
   fs.open(p, 'w', (err: any, fd: any) => {
