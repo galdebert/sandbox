@@ -1,7 +1,13 @@
-# install nvm
+#nvm for windows
+
+https://github.com/coreybutler/nvm-windows
+
+DO NOT USE! The installation of npm 6.1 (node >= 10.0) just does not work.
+
+# install nvm for linux
 
 ```
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
 ```
 
 check installation
