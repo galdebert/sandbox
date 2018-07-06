@@ -1,5 +1,5 @@
 Arguments: 
-  C:\dev\nodejs\node.exe C:\dev\Yarn\bin\yarn.js add fs @types/fs
+  C:\dev\nodejs\node.exe C:\dev\Yarn\bin\yarn.js list
 
 PATH: 
   C:\dev\cmder\bin;C:\dev\cmder\vendor\conemu-maximus5\ConEmu\Scripts;C:\dev\cmder\vendor\conemu-maximus5;C:\dev\cmder\vendor\conemu-maximus5\ConEmu;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\iCLS\;C:\Program Files\Intel\Intel(R) Management Engine Components\iCLS\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\Common Files\Autodesk Shared\;C:\dev\git\cmd;C:\dev\Yarn\bin\;C:\dev\bin;C:\Users\galde\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Microsoft VS Code\bin;C:\Users\galde\AppData\Roaming\nvm;C:\dev\nodejs;C:\Users\galde\AppData\Local\Yarn\bin;C:\dev\git\mingw64;C:\dev\git\usr\bin;C:\dev\cmder
@@ -14,34 +14,32 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/@types%2ffs: Not found
-      at Request.params.callback [as _callback] (C:\dev\Yarn\lib\cli.js:65656:18)
-      at Request.self.callback (C:\dev\Yarn\lib\cli.js:134675:22)
-      at emitTwo (events.js:126:13)
-      at Request.emit (events.js:214:7)
-      at Request.<anonymous> (C:\dev\Yarn\lib\cli.js:135658:10)
-      at emitOne (events.js:116:13)
-      at Request.emit (events.js:211:7)
-      at IncomingMessage.<anonymous> (C:\dev\Yarn\lib\cli.js:135578:12)
-      at Object.onceWrapper (events.js:313:30)
-      at emitNone (events.js:111:20)
+  SyntaxError: D:\dev\galdebert\sandbox\ts\test-node-yarn\package.json: Unexpected string in JSON at position 289
+      at JSON.parse (<anonymous>)
+      at C:\dev\Yarn\lib\cli.js:1130:59
+      at Generator.next (<anonymous>)
+      at step (C:\dev\Yarn\lib\cli.js:98:30)
+      at C:\dev\Yarn\lib\cli.js:109:13
+      at <anonymous>
 
 npm manifest: 
   {
     "name": "test-node-yarn",
     "version": "1.0.0",
-    "description": "my first node app",
-    "main": "src/main.js",
-    "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 1",
-      "tsc_": "tsc"
-    },
+    "description": "",
+    "main": "out/main.js",
     "keywords": [],
     "author": "Guillaume Aldebert",
     "license": "ISC",
+    "scripts": {
+      "build": "tsc",
+      "test": "tsc && node out/main.js",
+      "start": "tsc && node out/main.js"
+    }
     "dependencies": {
       "@types/express": "^4.16.0",
-      "express": "^4.16.3"
+      "express": "^4.16.3",
+      "fs": "^0.0.1-security"
     }
   }
 
@@ -239,6 +237,10 @@ Lockfile:
   fresh@0.5.2:
     version "0.5.2"
     resolved "https://registry.yarnpkg.com/fresh/-/fresh-0.5.2.tgz#3d8cadd90d976569fa835ab1f8e4b23a105605a7"
+  
+  fs@^0.0.1-security:
+    version "0.0.1-security"
+    resolved "https://registry.yarnpkg.com/fs/-/fs-0.0.1-security.tgz#8a7bd37186b6dddf3813f23858b57ecaaf5e41d4"
   
   http-errors@1.6.2:
     version "1.6.2"

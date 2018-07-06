@@ -11,23 +11,8 @@
   "keywords": [],
   "author": "Guillaume Aldebert",
   "license": "ISC",
-  "dependencies": {
-    "save-dev": "^2.0.0"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "@types/express": "^4.16.0",
-    "@types/marked": "0.0.28",
-    "@types/node": "^8.10.20",
-    "@types/request": "0.0.45",
-    "@types/socket.io": "^1.4.36",
-    "@types/underscore": "^1.8.8",
-    "express": "^4.16.3",
-    "fs": "0.0.1-security",
-    "fs-extra": "^3.0.1",
-    "marked": "^0.3.19",
-    "request": "^2.87.0",
-    "socket.io": "^2.1.1",
-    "typescript": "^2.9.2",
-    "underscore": "^1.9.1"
+    "@types/node": "^10.5.1"
   }
 }

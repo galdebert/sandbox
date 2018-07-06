@@ -10,7 +10,7 @@
     "build": "tsc",
     "test": "tsc && node out/main.js",
     "start": "tsc && node out/main.js"
-  }
+  },
   "dependencies": {
     "@types/express": "^4.16.0",
     "express": "^4.16.3",
