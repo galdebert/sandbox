@@ -1,5 +1,5 @@
 {
-  "name": "my-app",
+  "name": "my-other-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -14,14 +14,10 @@
     "eject": "react-scripts-ts eject"
   },
   "devDependencies": {
-    "@types/enzyme": "^3.1.11",
-    "@types/enzyme-adapter-react-16": "^1.0.2",
     "@types/jest": "^23.1.5",
     "@types/node": "^10.5.2",
     "@types/react": "^16.4.6",
     "@types/react-dom": "^16.0.6",
-    "enzyme": "^3.3.0",
-    "enzyme-adapter-react-16": "^1.1.1",
     "typescript": "^2.9.2"
   }
 }
