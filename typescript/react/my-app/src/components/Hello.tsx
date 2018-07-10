@@ -1,15 +1,13 @@
-// src/components/Hello.tsx
-
 import * as React from 'react';
 import './Hello.css'; // understood by webpack
 
-export interface Props {
+export interface IProps {
   name: string;
   enthusiasmLevel?: number;
 }
 
 // Hello is a stateless function component (an SFC)
-function Hello({ name, enthusiasmLevel = 1 }: Props) {
+function Hello({ name, enthusiasmLevel = 1 }: IProps) {
   if (enthusiasmLevel <= 0) {
     throw new Error('You could be a little more enthusiastic. :D');
   }
