@@ -4,10 +4,13 @@ import './Hello.css'; // understood by webpack
 export interface IProps {
   name: string;
   enthusiasmLevel?: number;
+  onIncrement?: () => void;
+  onDecrement?: () => void;
 }
 
-// Hello is a stateless function component (an SFC)
-function Hello({ name, enthusiasmLevel = 1 }: IProps) {
+
+// Hello is a Stateless Function Component (an SFC)
+function Hello({ name, enthusiasmLevel = 1, onIncrement, onDecrement}: IProps) {
   if (enthusiasmLevel <= 0) {
     throw new Error('You could be a little more enthusiastic. :D');
   }
@@ -16,6 +19,10 @@ function Hello({ name, enthusiasmLevel = 1 }: IProps) {
     <div className="hello">
       <div className="greeting">
         Hello {name + getExclamationMarks(enthusiasmLevel)}
+      </div>
+      <div>
+        <button onClick={onDecrement}>-</button>
+        <button onClick={onIncrement}>+</button>
       </div>
     </div>
   );

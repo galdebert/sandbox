@@ -39,17 +39,39 @@ Enzyme is a common tool in the React ecosystem that makes it easier to write tes
 
 
 ```
-import { configure } from 'enzyme';
+import * as Enzyme from 'enzyme';
 import * as Adapter from 'enzyme-adapter-react-16';
-
-configure({adapter: new Adapter()});
-
-const testContext = require.context('./', true, /\.spec\.tsx/);
-testContext.keys().forEach(testContext);
+import * as React from 'react';
+import Hello from './Hello';
 ```
-
 
 https://github.com/facebook/react/issues/11214
 
+
+# Adding state management
+
+As far as a React component is concerned, data flows down through its children through the props you specify on each element.
+
+**Redux** relies on synchronizing data through a centralized and immutable store of data, and updates to that data will trigger a re-render of our application. State is updated in an immutable fashion by sending explicit action messages which must be handled by functions called reducers. Because of the explicit nature, it is often easier to reason about how an action will affect the state of your program.
+
+**MobX** relies on functional reactive patterns where state is wrapped through observables and passed through as props. Keeping state fully synchronized for any observers is done by simply marking state as observable. As a nice bonus, the library is already written in TypeScript.
+
+```
+npm install redux react-redux @types/react-redux
+```
+
+actually I think this is better:
+```
+npm install redux react-redux
+npm install -D @types/react-redux
+```
+
+There is no `@types/redux` because Redux provides its own type definitions, so you don't need anything more!
+
+
+
+# containers
+
+When writing with Redux, we will often write **components** as well as **container**. Components are often data-agnostic, and work mostly at a presentational level. **Containers typically wrap components and feed them any data that is necessary to display and modify state**.
 
 
