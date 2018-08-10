@@ -8,7 +8,9 @@ https://confluence.atlassian.com/bitbucket/set-up-an-ssh-key-728138079.html
 
 https://docs.microsoft.com/en-us/vsts/repos/git/use-ssh-keys-to-authenticate?view=vsts
 
-SSH public key authentication works with a pair of generated encryption keys. The public key is shared and used to encrypt messages. The private key is kept safe and secure on your system and is used to read messages encrypted with the public key.
+SSH public key authentication works with a pair of generated encryption keys.
+- The public key is shared and used to encrypt messages.
+- The private key is kept safe and secure on your system and is used to read messages encrypted with the public key.
 
 # 1. Generate an SSH key for that computer
 
@@ -107,8 +109,8 @@ This will also add `github.com` to `C:/Users/galde/.ssh/known_hosts`
 
 First retrieve the SSH address:
 
-<img width="300" src="using-ssh-withgithub.md.img/2018-08-10-15-31-11.png">
-<img width="300" src="using-ssh-withgithub.md.img/2018-08-10-15-31-32.png">
+<img width="300" src="using-ssh-with-github.md.img/2018-08-10-15-31-11.png">
+<img width="300" src="using-ssh-with-github.md.img/2018-08-10-15-31-32.png">
 
 ## For an existing repo that uses https:
 
