@@ -34,10 +34,10 @@ and run:
 ```
 ssh-keygen -t rsa -b 4096
 ```
-- `-t rsa` is the encoding
+- `-t rsa` is the encoding (note it's rsa by default)
 - `-b 4096` is the number of bits
-- this asks for location, default is `C:\Users\galde\.ssh`, it's fine, press enter
-- this asks for a passphrase, no need for one, press enter.
+- this asks for the key file location, default is `C:\Users\galde\.ssh`, it's fine, press enter
+- this asks for a **passphrase**, no need for one, press enter.
   - If set, the passphrase will be asked every time the ssh key is used, unless an ssh-agent is used. The advantage that the passphrase gives you is that if someone is able to read your private key, they are 'unable' to use it.
 - by default the label (aka comment) will be `galde@DESKTOP-N8ACAMP` i.e. user@machine
 - this will also print the key fingerprint, you can later retrieve the fingerprint with
@@ -50,21 +50,18 @@ in `C:\Users\galde\.ssh`:
 - `id_rsa.pub` contains the public key, that you can put on the internet
 
 
-# 2. Only if you used a passphrase... Add your SSH key to the ssh-agent (NOT ALWAYS REQUIRED)
+# 2. Only if you used a passphrase... Add your SSH key to the ssh-agent
 
-If you gave a passphrase be sure to configure the SSH agent to cache your passphrase so you don't have to enter it every time you connect.
+If you gave a passphrase, be sure to configure the SSH agent to cache your passphrase so you don't have to enter it every time you connect.
 
-**If you don't want to type your password (passphrase) each time you use the key, you'll need to add it to the ssh-agent.**
-
-
-a. Ensure the ssh-agent is running
+## a. Ensure the ssh-agent is running
 
 If you are using Git for Windows, you can use the "Auto-launching the ssh-agent" instructions in "Working with SSH key passphrases", or start it manually:
 ```
 eval $(ssh-agent -s)
 ```
 
-b. Add your SSH private key to the ssh-agent
+## b. Add your SSH private key to the ssh-agent
 
 ```
 ssh-add ~/.ssh/id_rsa
@@ -72,7 +69,7 @@ ssh-add ~/.ssh/id_rsa
 
 # 3. Add the SSH key to your GitHub account.
 
-- copy the ENTIRE content of the `id_rsa.pub` file (MINUS THE LAST NEWLINE)
+- copy the **ENTIRE** content of the `id_rsa.pub` file **MINUS THE LAST NEWLINE**
   - the key starts with `ssh-rsa` and ends with `galde@DESKTOP-N8ACAMP`
 - go to https://github.com/settings/keys
 - click `New SSH Key`
