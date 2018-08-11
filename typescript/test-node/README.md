@@ -1,33 +1,21 @@
 # README
 
-## how this was setup
-
 ## package.json
 
 was created with `npm init`, with the additional:
-
 ```
 npm install @types/node --save-dev
 ```
-It's very important otherwise it sptis the error 'fs'
+It's very important otherwise it spits an error about the 'fs' module
+
 
 ## tsconfig
 
-tsconfig was created by `tsc --init`
+tsconfig was created with `tsc --init`
+
 
 ## in a freshly cloned repo
 
 - run `npm install`
 
-
-
-
-
-<!--
-npm install marked @marked/fs
-npm install request
-npm install socket.io
-npm install typescript
-npm install underscore
--->
 

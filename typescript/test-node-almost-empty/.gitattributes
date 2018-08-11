@@ -1,5 +1,0 @@
-# npm 5.6 uses LF to write package.json and package-lock.json
-# npm 5.8 use CRLF on windows (TBC)
-# more info: https://stackoverflow.com/questions/32490412/how-can-i-configure-npm-to-use-windows-style-line-endings-in-package-json
-package.json text eol=lf
-package-lock.json text eol=lf
