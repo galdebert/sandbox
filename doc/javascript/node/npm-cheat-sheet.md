@@ -18,8 +18,11 @@ npm ls -g --depth 0
 There is a `--local-only`, but does not seem necessary
 
 ## view available versions online
+
 ```
 npm view create-react-app versions
+
+npm show redux-orm@* version
 ```
 
 ## check available updates, install them (here globally)
