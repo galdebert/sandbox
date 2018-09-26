@@ -5,6 +5,16 @@ including untracked files
 git add -A && git commit -m mymessage
 ```
 
+
+# Normalize EOL to what git clone gives you
+
+MAKE SURE ALL YOUR WIP IS COMMIT, and then:
+```
+git rm --cached -r .
+git reset --hard
+```
+
+
 # Create a patch for a list a commits
 
 https://stackoverflow.com/questions/2217452/in-git-how-do-i-create-a-single-patch-for-the-last-2-revisions

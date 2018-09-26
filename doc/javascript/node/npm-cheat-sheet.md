@@ -19,11 +19,18 @@ There is a `--local-only`, but does not seem necessary
 
 ## view available versions online
 
+This is one seems to actually list all versions
 ```
-npm view create-react-app versions
+npm view mypackage versions
+```
 
-npm show redux-orm@* version
+This is one misses all '4.0.0-rc.X'
 ```
+npm show mypackage@* version
+```
+
+actually, `info`, `show`, `view`, `v` are the same command
+
 
 ## check available updates, install them (here globally)
 
