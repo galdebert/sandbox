@@ -21,15 +21,15 @@ kate filename 2>/dev/null &
 
 To change the shutter keyboard shortcut, open kubuntu Custom shortcut and add:
 
-![](notes.md.img/2018-06-05-13-17-49.png)
+![](my-linux-cheatsheet.md.img/2018-06-05-13-17-49.png)
 
-![](notes.md.img/2018-06-05-13-19-52.png)
+![](my-linux-cheatsheet.md.img/2018-06-05-13-19-52.png)
 
 
 # How to add a link to the taskbar
 
 - right click > create new > link to application
-- set command: code path/to_file/or/dir
+- set command, for ex: code path/to_file/or/dir
 - change the icon
 - this creates a .desktop file
 - drag n drop the .desktop file in the taskbar 
