@@ -1,3 +1,9 @@
+# Shortcuts
+
+`alt+space`: Kubuntu search bar
+
+
+
 # Run command same terminal
 
 run kate while removing log
