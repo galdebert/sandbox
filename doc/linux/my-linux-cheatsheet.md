@@ -1,7 +1,7 @@
 # Shortcuts
 
 `alt+space`: Kubuntu search bar
-
+`ctrm+esc`: View processes
 
 
 # Run command same terminal
