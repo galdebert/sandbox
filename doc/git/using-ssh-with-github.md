@@ -12,7 +12,13 @@ SSH public key authentication works with a pair of generated encryption keys.
 - The public key is shared and used to encrypt messages.
 - The private key is kept safe and secure on your system and is used to read messages encrypted with the public key.
 
+
 # 1. Generate an SSH key for that computer
+
+If you enter a passphrase. The **SSH agent** manages your SSH keys and remembers your passphrase, so that you don't have to reenter your passphrase every time you use your SSH key.
+
+
+## check `ssh-keygen` and `ssh-agent` on windows
 
 We'll need to run OpenSSH's `ssh-keygen`. It looks like we can use either:
 - the git-bash version
@@ -29,6 +35,20 @@ C:\dev\git\usr\bin\ssh-agent.exe
 ```
 
 Let's use git-bash: `C:\dev\git\git-bash`
+
+
+## check `ssh-keygen` and `ssh-agent` on Linux 
+
+```
+guillaume@linux:~/dev/galdebert$ which ssh-keygen
+/usr/bin/ssh-keygen
+
+guillaume@linux:~/dev/galdebert$ which ssh-agent
+/usr/bin/ssh-agent
+```
+
+
+## Generate the key
 
 and run:
 ```
@@ -50,7 +70,7 @@ in `C:\Users\galde\.ssh`:
 - `id_rsa.pub` contains the public key, that you can put on the internet
 
 
-# 2. Only if you used a passphrase... Add your SSH key to the ssh-agent
+# 2. Only if you used a passphrase: Add your key to the ssh-agent
 
 If you gave a passphrase, be sure to configure the SSH agent to cache your passphrase so you don't have to enter it every time you connect.
 
