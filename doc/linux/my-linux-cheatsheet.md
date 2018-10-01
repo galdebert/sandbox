@@ -39,7 +39,9 @@ To change the shutter keyboard shortcut, open kubuntu Custom shortcut and add:
 - change the icon
 - this creates a .desktop file
 - drag n drop the .desktop file in the taskbar 
-  - this will copy the .desktop file in /home/guillaume/.local/share/plasma_icons
+  - this will copy the .desktop file in
+    - /home/guillaume/.local/share/plasma_icons
+    - /home/guillaume/.local/share/applications/
   - and register it somewhere so that it's in the tasbar
 
 
