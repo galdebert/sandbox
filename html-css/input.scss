@@ -1,7 +1,7 @@
-@import 'imported';
-@import 'mymixin';
-@import 'extend';
-@import 'operators';
+@import './imported';
+@import './mymixin';
+@import './extend';
+@import './operators';
 
 // variables
 $font-stack: Helvetica, sans-serif;
