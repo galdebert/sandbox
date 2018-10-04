@@ -1,5 +1,4 @@
-
-# How to avoid always entering git credentials
+# How to avoid always entering git credentials without ssh
 
 https://git-scm.com/docs/gitcredentials
 
