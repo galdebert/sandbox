@@ -1,51 +1,64 @@
 # npm-cheat-sheet
 
-## list only top level dependencies
+## yarn
+
+on windows:
 ```
-npm list -g --depth 0
+yarn add react-dnd@^3.0.2
+```
+results in "react-dnd": "3.0.2" in the package.json
+
+use instead:
+```
+yarn add "react-dnd@^3.0.2"
+```
+results in "react-dnd": "^3.0.2" in the package.json
+
+## check dependencies
+
+```
+yarn check
+```
+
+## list top level dependencies
+
+```
 npm list --depth 0
 ```
 
-## get help on a command, ex list
+## get help on a command (ex: list)
 ```
 npm help list
 ```
 
-## list global modules installed on my machine
+## view dependencies of a package
+
 ```
-npm ls -g --depth 0
+npm info mypackage@X.Y.Z dependencies
 ```
-There is a `--local-only`, but does not seem necessary
 
 ## view available versions online
 
 This is one seems to actually list all versions
 ```
-npm view mypackage versions
+npm info mypackage versions
 ```
 
-This is one misses all '4.0.0-rc.X'
-```
-npm show mypackage@* version
-```
-
-actually, `info`, `show`, `view`, `v` are the same command
-
-
-## check available updates, install them (here globally)
+## check available updates, install them 
 
 ```
-npm outdated -g
+npm outdated
 ```
 gives you `current`, `wanted`, and `latest` versions.
 
 To install the `wanted` version:
 ```
-npm update -g yourpackage
+npm update yourpackage
 ```
 
 To install the `latest` version:
 ```
-npm install -g yourpackage
+npm install yourpackage
 ```
+
 
