@@ -1,6 +1,6 @@
-# npm-cheat-sheet
+# npm-yarn-cheat-sheet
 
-## yarn
+# yarn add and the caret on windows
 
 on windows:
 ```
@@ -14,37 +14,51 @@ yarn add "react-dnd@^3.0.2"
 ```
 results in "react-dnd": "^3.0.2" in the package.json
 
-## check dependencies
+# yarn check dependencies
 
 ```
 yarn check
 ```
 
-## list top level dependencies
+# yarn check available updates, install them 
+
+```
+yarn outdated
+```
+
+`yarn upgrade` changes your `yarn-lock.json`, but does NOT change your `package.json`
+
+```
+yarn upgrade
+yarn upgrade --latest
+```
+
+
+# npm list top level dependencies
 
 ```
 npm list --depth 0
 ```
 
-## get help on a command (ex: list)
+# npm get help on a command (ex: list)
 ```
 npm help list
 ```
 
-## view dependencies of a package
+# npm view dependencies of a package
 
 ```
 npm info mypackage@X.Y.Z dependencies
 ```
 
-## view available versions online
+# npm view available versions online
 
 This is one seems to actually list all versions
 ```
 npm info mypackage versions
 ```
 
-## check available updates, install them 
+# npm check available updates, install them 
 
 ```
 npm outdated
