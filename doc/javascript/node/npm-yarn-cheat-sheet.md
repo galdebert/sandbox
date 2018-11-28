@@ -33,6 +33,11 @@ yarn upgrade
 yarn upgrade --latest
 ```
 
+# yarn view available versions online
+
+```
+npm info mypackage versions
+```
 
 # npm list top level dependencies
 
