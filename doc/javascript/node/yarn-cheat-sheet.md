@@ -1,6 +1,7 @@
 # npm-yarn-cheat-sheet
 
 - `yarn outdated`: list available updates, install them 
+- `yarn why mypackage`: tells what package has mypackage as a dependency
 - `yarn upgrade` changes your `yarn-lock.json`, but does NOT change your `package.json`
 - `yarn upgrade --latest`
 - `yarn check`: check dependencies
@@ -17,8 +18,7 @@
 ### yarn run
 
 - `yarn run env`
-
-- yarn run [script] [<arg>]
+- `yarn run [script] [<arg>]`
   - You can pass additional arguments to your script by passing them after the script name, ex `yarn run test -o --watch`
   - [script] can also be any locally installed executable that is inside node_modules/.bin/.
 
