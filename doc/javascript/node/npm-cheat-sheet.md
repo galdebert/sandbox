@@ -33,6 +33,11 @@ yarn upgrade
 yarn upgrade --latest
 ```
 
+# yarn view available versions online
+
+```
+npm info mypackage versions
+```
 
 yarn install --production[=true|false]
 Yarn will not install any package listed in devDependencies if the NODE_ENV environment variable is set to production. Use this flag to instruct Yarn to ignore NODE_ENV and take its production-or-not status from this flag instead.
