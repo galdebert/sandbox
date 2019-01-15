@@ -1,13 +1,16 @@
 Ctrl+Shift+P, F1  show command palette
 
-Ctrl+Shift+O  search for @symbol
-Ctrl+T        search for #symbol
+Ctrl+Shift+O  search for @symbol in file
+Ctrl+T        search for #symbol in project
 Ctrl+P        search for file
 
 Alt+D   go to definition
+Alt+T   go to type definition
+Alt+R   list all references
+
+Alt+Y   peek type definition
 Alt+V   peek definition
 Alt+I   peek implementation
-Alt+R   list all references
 
 Ctrl+;         quick fix
 F2             rename
