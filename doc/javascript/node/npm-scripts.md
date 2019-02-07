@@ -2,9 +2,6 @@
 
 https://medium.com/@jonjam/writing-npm-scripts-using-typescript-a09b8712dc6b
 
-If you are using gulp or grunt, you should check out this blog post about the reasons why to move to npm scripts: https://medium.freecodecamp.org/why-i-left-gulp-and-grunt-for-npm-scripts-3d6853dd22b8
-
-
 package.json
 ```
 {
@@ -23,6 +20,27 @@ on the command line, use
 
 https://docs.npmjs.com/cli/run-script
 
+
+# to pass parameters to npm script
+
+- `npm run <command> [-- <args>]`
+- `yarn run <command> [-- <args>]`
+
+ex:
+
+```json
+"scripts": {
+  "server": "node server.js"
+}
+```
+
+`npm run server -- --port=1337`
+
+runs:
+
+`node server.js --port=1337`
+
+# with vscode
 
 vscode automatically detect package.json scripts and can run them with
 

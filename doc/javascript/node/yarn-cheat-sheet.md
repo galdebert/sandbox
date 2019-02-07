@@ -5,12 +5,19 @@
 - `yarn upgrade` changes your `yarn-lock.json`, but does NOT change your `package.json`
 - `yarn upgrade --latest`
 - `yarn check`: check dependencies
+- `yarn info mypackage versions` view mypackage available versions online
+- `yarn info mypackage version` view mypackage latest version online
+- `yarn list --depth=0` list packages installed locally
+- `yarn global list --depth=0` list packages installed globally
+
 
 ### mind the ^ on windows
+
 - on windows: `yarn add react-dnd@^3.0.2` results in "react-dnd": "3.0.2" in the package.json
 - use instead: `yarn add "react-dnd@^3.0.2"` results in "react-dnd": "^3.0.2" in the package.json
 
 ### yarn install, NODE_ENV, devDependencies
+
 - `yarn install` if NODE_ENV = production, yarn will NOT install devDependencies
 - `yarn install --production=true` ignore NODE_ENV, yarn will NOT install devDependencies
 - `yarn install --production=false` ignore NODE_ENV, yarn WILL install devDependencies
