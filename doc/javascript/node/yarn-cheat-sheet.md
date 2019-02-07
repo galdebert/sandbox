@@ -24,8 +24,13 @@
 
 ### yarn run
 
-- `yarn run env`
-- `yarn run [script] [<arg>]`
-  - You can pass additional arguments to your script by passing them after the script name, ex `yarn run test -o --watch`
-  - [script] can also be any locally installed executable that is inside node_modules/.bin/.
+- `yarn run env` list environment variables available to the scripts at runtime
+- `yarn run [script] [<arg>]` pass additional argumentsarguments
+- [script] can also be any locally installed executable that is inside `node_modules/.bin/`
 
+```json
+"scripts": {
+  "server": "node server.js"
+}
+```
+`yarn run server --port=1337` runs `server.js --port=1337`

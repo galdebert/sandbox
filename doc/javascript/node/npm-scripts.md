@@ -24,8 +24,6 @@ https://docs.npmjs.com/cli/run-script
 # to pass parameters to npm script
 
 - `npm run <command> [-- <args>]`
-- `yarn run <command> [-- <args>]`
-
 ex:
 
 ```json
