@@ -26,29 +26,60 @@ Except when github is very slow to authenticate, then it's mess:
 ```
 
 
-# store passwords in plain **plain text**, very bad !
+# `store`: store passwords in plain **plain text**, very bad !
 
 ```
 git config --global credential.helper store
 ```
+on windows the file is 
 
-# store passwords in memory for some time
 
-`credential.helper cache` does not work on windows !!
+# `cache`: store passwords in memory for some time
+
+`credential.helper cache` does not work on windows !!!!
 ```
 git config --global credential.helper cache
 ```
 
+# `.netrc`
 
-# Store passwords using an external password manager
+on windows it's located at `%HOME%\_netrc`
+
+it's a text file witht he following content:
+```
+machine git.heroku.com
+  login galdebert@gmail.com
+  password xxxxxxxxxxxxxxxxx
+```
+
+A common trap with with netrc support on Windows is that git will bypass using it if an origin https url specifies a user name.
+
+For example, if your .git/config file contains:
+```
+[remote "origin"]
+  fetch = +refs/heads/*:refs/remotes/origin/*
+  url = https://bob@code.google.com/p/my-project/
+```
+
+Git will not resolve your credentials via _netrc, to fix this remove your username, like so:
+```
+[remote "origin"]
+  fetch = +refs/heads/*:refs/remotes/origin/*
+  url = https://code.google.com/p/my-project/
+```
+
+
+
+# `manager` Store passwords using an external password manager
 
 ## Windows
+
 ```
 git config --global credential.helper manager
 ```
 
-
 ## OSX
+
 ```
 git config --global credential.helper osxkeychain
 or
