@@ -1,16 +1,16 @@
 # npm-yarn-cheat-sheet
 
-- `yarn outdated`: list available updates, install them 
+- `yarn outdated`: lists available updates, install them 
 - `yarn why mypackage`: tells what package has mypackage as a dependency
-- `yarn upgrade` changes your `yarn-lock.json`, but does NOT change your `package.json`
-- `yarn upgrade --latest` same as the upgrade command, but ignores the version range specified in package.json. Instead, the version specified by the latest tag will be used (potentially upgrading the packages across major versions).
+- `yarn upgrade`: changes your `yarn-lock.json`, but does NOT change your `package.json`
+- `yarn upgrade --latest`: same as the upgrade command, but ignores the version range specified in package.json. Instead, the version specified by the latest tag will be used (potentially upgrading the packages across major versions).
 The package.json file will be updated to reflect the latest version range.
-- `yarn check`: check dependencies
-- `yarn info mypackage versions` view mypackage available versions online
-- `yarn info mypackage version` view mypackage latest version online
-- `yarn list mypackage` view mypackage version installed locally
-- `yarn list --depth=0` list packages installed locally
-- `yarn global list --depth=0` list packages installed globally
+- `yarn check`: checks dependencies
+- `yarn info mypackage versions`: views mypackage available versions online
+- `yarn info mypackage version`: views mypackage latest version online
+- `yarn list mypackage`: views mypackage version installed locally
+- `yarn list --depth=0`: lists packages installed locally
+- `yarn global list --depth=0`: lists packages installed globally
 
 
 ### mind the ^ on windows
@@ -26,8 +26,8 @@ The package.json file will be updated to reflect the latest version range.
 
 ### yarn run
 
-- `yarn run env` list environment variables available to the scripts at runtime
-- `yarn run [script] [<arg>]` pass additional argumentsarguments
+- `yarn run env`: lists environment variables available to the scripts at runtime
+- `yarn run [script] [<arg>]`: passes additional argumentsarguments
 - [script] can also be any locally installed executable that is inside `node_modules/.bin/`
 
 ```json
