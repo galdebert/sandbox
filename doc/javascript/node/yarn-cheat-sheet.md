@@ -12,6 +12,13 @@ The package.json file will be updated to reflect the latest version range.
 - `yarn list --depth=0`: lists packages installed locally
 - `yarn global list --depth=0`: lists packages installed globally
 
+### Where does yarn store global packages
+
+https://github.com/yarnpkg/yarn/issues/2049
+- `%LOCALAPPDATA%/Yarn/config/global` on Windows
+- `~/.config/yarn/global` on OSX and non-root Linux
+- `/usr/local/share/.config/yarn/global` on Linux if logged in as root
+
 
 ### mind the ^ on windows
 
