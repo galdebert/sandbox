@@ -43,3 +43,10 @@ https://github.com/yarnpkg/yarn/issues/2049
 }
 ```
 `yarn run server --port=1337` runs `server.js --port=1337`
+
+### where to find the what has been yarn linked
+
+- linux: ~/.config/yarn/link
+- windows: C:\Users\<userName>\AppData\Local\Yarn\Data\link
+
+
