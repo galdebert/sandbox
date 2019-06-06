@@ -14,6 +14,16 @@ git rm --cached -r .
 git reset --hard
 ```
 
+# smartgit: check diff of 2 previous versions of a file
+
+- use Log in smartgit
+- select 2 commits using CTRL
+- select a file on the right
+=> will show the diff of the file versions at those 2 commits 
+
+# smartgit: chen merging a file, check the each side difference with the common base
+
+TODO
 
 # Create a patch for a list a commits
 
@@ -35,6 +45,6 @@ git merge --squash my-branch-with-tons-of-little-commits
 git commit
 ```
 or
-`git merge --squash my-commit-id`
-
-
+```
+git merge --squash my-commit-id
+```
