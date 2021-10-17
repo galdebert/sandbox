@@ -60,7 +60,7 @@ fn main() {
             x: left_edge,
             y: top_edge,
         },
-        bottom_right: bottom_right,
+        bottom_right,
     };
 
     // Instantiate a unit struct

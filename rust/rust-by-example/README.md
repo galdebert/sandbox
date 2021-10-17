@@ -1,3 +1,8 @@
+# vscode extension
+
+Use **rust-analyzer** (the official "Rust for Visual Studio Code" is abandonned)
+
+
 # cargo
 
 https://doc.rust-lang.org/cargo/getting-started/first-steps.html
