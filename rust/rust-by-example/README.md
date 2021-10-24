@@ -1,3 +1,15 @@
+# books
+
+The Rust Programming Language         https://doc.rust-lang.org/book/
+
+rustlings                             https://github.com/rust-lang/rustlings/
+  small exercises to get you used to reading and writing Rust code
+
+standard lib                          https://doc.rust-lang.org/std/index.html
+Command Line Applications in Rust     https://rust-cli.github.io/book/index.html
+Rust and WebAssembly                  https://rustwasm.github.io/docs/book/
+
+
 # vscode extension
 
 Use **rust-analyzer** (the official "Rust for Visual Studio Code" is abandonned)
