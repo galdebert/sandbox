@@ -1,3 +1,14 @@
+# How to build and run
+
+click on `Run|Debug` above the `fn main`
+
+or 
+
+```
+cargo run --bin 100-hello-world
+```
+
+
 # books
 
 The Rust Programming Language         https://doc.rust-lang.org/book/
@@ -57,7 +68,7 @@ https://www.forrestthewoods.com/blog/how-to-debug-rust-with-visual-studio-code/
 - If you're on Windows then select `C++ (Windows)`
 - If you're on Mac or Linux then select `LLDB: Custom Launch`
 
-Next, you should verify breakpoints are enabled in settings.json
+Next, you should verify breakpoints are enabled in `settings.json`
 
 ```json
 "debug.allowBreakpointsEverywhere": true, // false by default
