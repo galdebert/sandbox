@@ -1,6 +1,6 @@
 # README
 
-Project initialized with `cargo new sandbox --vcs=git`
+Project initialized with `cargo new sandbox`
 
 # the src/bin folder
 
