@@ -1,7 +1,5 @@
 {
   // https://github.com/rust-analyzer/rust-analyzer/blob/master/docs/user/generated_config.adoc
   "rust-analyzer.lens.enable": true,
-
-  // : i32  inlay in  let x: i32 = 2;
-  "rust-analyzer.inlayHints.typeHints": true
+  "rust-analyzer.inlayHints.typeHints.enable": true
 }
