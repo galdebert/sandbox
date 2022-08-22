@@ -15,9 +15,13 @@ F1 > rust-analyzer: Toggle inlay hints
 
 click on `Run|Debug` above the `fn main`
 
-or 
+or
 
 ```
 cargo run --bin src/my_file
 ```
+
+# resources
+
+https://doc.rust-lang.org/rust-by-example
 
