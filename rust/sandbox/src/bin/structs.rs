@@ -13,6 +13,8 @@ impl Point2d {
     }
 
     // DO NOT USE fn sqlen(self) -> f32 {} because this *moves* self
+    // `&self` is sugar for `self: &Self`, where `Self` is the type of the
+    // caller object. In this case `Self` = `Rectangle`
     fn sqlen(&self) -> f32 {
         self.x * self.x + self.y * self.y
     }
